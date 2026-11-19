@@ -1,0 +1,293 @@
+================================================================
+== Vivado Place & Route Results
+================================================================
++ General Information:
+    * Date:            Tue Nov 17 10:32:18 +0100 2026
+    * Version:         2026.1 (Build 6493734 on Jun 16 2026)
+    * Project:         snn_mlp
+    * Solution:        hls
+    * Product family:  zynq
+    * Target device:   xc7z020-clg400-1
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * Place & Route target clock:  8 ns
+    * C-Synthesis target clock:    8 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Place & Route Options:
+    * config_export -vivado_impl_strategy:  default
+    * config_export -vivado_phys_opt:       auto
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== Place & Route Resource Summary
+================================================================
+LUT:              4485
+FF:               4368
+DSP:              8
+BRAM:             39
+URAM:             0
+SRL:              47
+
+
+================================================================
+== Place & Route Timing Summary
+================================================================
+* Timing was met
++----------------+-------------+
+| Timing         | Period (ns) |
++----------------+-------------+
+| Target         | 8.000       |
+| Post-Synthesis | 6.016       |
+| Post-Route     | 6.585       |
++----------------+-------------+
+
+
+================================================================
+== Place & Route Resources
+================================================================
++--------------------------------------------------------------------+-----+----+-----+------+------+-----+--------+------+---------+----------+--------+
+| Name                                                               | LUT | FF | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
++--------------------------------------------------------------------+-----+----+-----+------+------+-----+--------+------+---------+----------+--------+
+| inst                                                               |     |    |     |      |      | 47  |        |      |         |          |        |
+|   (inst)                                                           |     |    |     |      |      | 1   |        |      |         |          |        |
+|   control_s_axi_U                                                  |     |    |     |      |      |     |        |      |         |          |        |
+|     (control_s_axi_U)                                              |     |    |     |      |      |     |        |      |         |          |        |
+|   features_1_U                                                     |     |    |     |      |      |     |        |      |         |          |        |
+|   features_2_U                                                     |     |    |     |      |      |     |        |      |         |          |        |
+|   features_3_U                                                     |     |    |     |      |      |     |        |      |         |          |        |
+|   features_4_U                                                     |     |    |     |      |      |     |        |      |         |          |        |
+|   features_5_U                                                     |     |    |     |      |      |     |        |      |         |          |        |
+|   features_6_U                                                     |     |    |     |      |      |     |        |      |         |          |        |
+|   features_7_U                                                     |     |    |     |      |      |     |        |      |         |          |        |
+|   features_8_U                                                     |     |    |     |      |      |     |        |      |         |          |        |
+|   features_9_U                                                     |     |    |     |      |      |     |        |      |         |          |        |
+|   features_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|   gmem_m_axi_U                                                     |     |    |     |      |      | 38  |        |      |         |          |        |
+|   grp_read_features_from_bram_fu_222                               |     |    |     |      |      |     |        |      |         |          |        |
+|     grp_read_features_from_bram_Pipeline_VITIS_LOOP_59_1_fu_81     |     |    |     |      |      |     |        |      |         |          |        |
+|       (grp_read_features_from_bram_Pipeline_VITIS_LOOP_59_1_fu_81) |     |    |     |      |      |     |        |      |         |          |        |
+|       flow_control_loop_pipe_sequential_init_U                     |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_snn_core_fu_239                                              |     |    |     |      |      | 8   |        |      |         |          |        |
+|     (grp_snn_core_fu_239)                                          |     |    |     |      |      |     |        |      |         |          |        |
+|     grp_fc1_lif_fu_274                                             |     |    |     |      |      | 8   |        |      |         |          |        |
+|       (grp_fc1_lif_fu_274)                                         |     |    |     |      |      |     |        |      |         |          |        |
+|       grp_fc1_lif_Pipeline_VITIS_LOOP_92_27_fu_310                 |     |    |     |      |      | 2   |        |      |         |          |        |
+|         (grp_fc1_lif_Pipeline_VITIS_LOOP_92_27_fu_310)             |     |    |     |      |      | 2   |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|         p_ZL5fc1_w_1_0_U                                           |     |    |     |      |      |     |        |      |         |          |        |
+|         p_ZL5fc1_w_1_1_U                                           |     |    |     |      |      |     |        |      |         |          |        |
+|       grp_fc1_lif_Pipeline_VITIS_LOOP_92_28_fu_326                 |     |    |     |      |      | 2   |        |      |         |          |        |
+|         (grp_fc1_lif_Pipeline_VITIS_LOOP_92_28_fu_326)             |     |    |     |      |      | 2   |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|         p_ZL5fc1_w_2_0_U                                           |     |    |     |      |      |     |        |      |         |          |        |
+|         p_ZL5fc1_w_2_1_U                                           |     |    |     |      |      |     |        |      |         |          |        |
+|       grp_fc1_lif_Pipeline_VITIS_LOOP_92_29_fu_342                 |     |    |     |      |      | 2   |        |      |         |          |        |
+|         (grp_fc1_lif_Pipeline_VITIS_LOOP_92_29_fu_342)             |     |    |     |      |      | 2   |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|         p_ZL5fc1_w_3_0_U                                           |     |    |     |      |      |     |        |      |         |          |        |
+|         p_ZL5fc1_w_3_1_U                                           |     |    |     |      |      |     |        |      |         |          |        |
+|       grp_fc1_lif_Pipeline_VITIS_LOOP_92_2_fu_294                  |     |    |     |      |      | 2   |        |      |         |          |        |
+|         (grp_fc1_lif_Pipeline_VITIS_LOOP_92_2_fu_294)              |     |    |     |      |      | 2   |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|         p_ZL5fc1_w_0_0_U                                           |     |    |     |      |      |     |        |      |         |          |        |
+|         p_ZL5fc1_w_0_1_U                                           |     |    |     |      |      |     |        |      |         |          |        |
+|       p_ZL5fc1_b_0_U                                               |     |    |     |      |      |     |        |      |         |          |        |
+|       p_ZL5fc1_b_1_U                                               |     |    |     |      |      |     |        |      |         |          |        |
+|       p_ZL5fc1_b_2_U                                               |     |    |     |      |      |     |        |      |         |          |        |
+|       p_ZL5fc1_b_3_U                                               |     |    |     |      |      |     |        |      |         |          |        |
+|     grp_fc2_lif_fu_322                                             |     |    |     |      |      |     |        |      |         |          |        |
+|       (grp_fc2_lif_fu_322)                                         |     |    |     |      |      |     |        |      |         |          |        |
+|       grp_fc2_lif_Pipeline_VITIS_LOOP_130_24_fu_294                |     |    |     |      |      |     |        |      |         |          |        |
+|         (grp_fc2_lif_Pipeline_VITIS_LOOP_130_24_fu_294)            |     |    |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|         p_ZL5fc2_w_1_U                                             |     |    |     |      |      |     |        |      |         |          |        |
+|       grp_fc2_lif_Pipeline_VITIS_LOOP_130_25_fu_312                |     |    |     |      |      |     |        |      |         |          |        |
+|         (grp_fc2_lif_Pipeline_VITIS_LOOP_130_25_fu_312)            |     |    |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|         p_ZL5fc2_w_2_U                                             |     |    |     |      |      |     |        |      |         |          |        |
+|       grp_fc2_lif_Pipeline_VITIS_LOOP_130_26_fu_330                |     |    |     |      |      |     |        |      |         |          |        |
+|         (grp_fc2_lif_Pipeline_VITIS_LOOP_130_26_fu_330)            |     |    |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|         p_ZL5fc2_w_3_U                                             |     |    |     |      |      |     |        |      |         |          |        |
+|       grp_fc2_lif_Pipeline_VITIS_LOOP_130_2_fu_276                 |     |    |     |      |      |     |        |      |         |          |        |
+|         (grp_fc2_lif_Pipeline_VITIS_LOOP_130_2_fu_276)             |     |    |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|         p_ZL5fc2_w_0_U                                             |     |    |     |      |      |     |        |      |         |          |        |
+|       p_ZL5fc2_b_0_U                                               |     |    |     |      |      |     |        |      |         |          |        |
+|       p_ZL5fc2_b_1_U                                               |     |    |     |      |      |     |        |      |         |          |        |
+|       p_ZL5fc2_b_2_U                                               |     |    |     |      |      |     |        |      |         |          |        |
+|       p_ZL5fc2_b_3_U                                               |     |    |     |      |      |     |        |      |         |          |        |
+|     grp_fc3_lif_fu_354                                             |     |    |     |      |      |     |        |      |         |          |        |
+|       (grp_fc3_lif_fu_354)                                         |     |    |     |      |      |     |        |      |         |          |        |
+|       grp_fc3_lif_Pipeline_VITIS_LOOP_162_21_fu_115                |     |    |     |      |      |     |        |      |         |          |        |
+|         (grp_fc3_lif_Pipeline_VITIS_LOOP_162_21_fu_115)            |     |    |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|         p_ZL5fc3_w_1_U                                             |     |    |     |      |      |     |        |      |         |          |        |
+|       grp_fc3_lif_Pipeline_VITIS_LOOP_162_22_fu_130                |     |    |     |      |      |     |        |      |         |          |        |
+|         (grp_fc3_lif_Pipeline_VITIS_LOOP_162_22_fu_130)            |     |    |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|         p_ZL5fc3_w_2_U                                             |     |    |     |      |      |     |        |      |         |          |        |
+|       grp_fc3_lif_Pipeline_VITIS_LOOP_162_23_fu_145                |     |    |     |      |      |     |        |      |         |          |        |
+|         (grp_fc3_lif_Pipeline_VITIS_LOOP_162_23_fu_145)            |     |    |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|         p_ZL5fc3_w_3_U                                             |     |    |     |      |      |     |        |      |         |          |        |
+|       grp_fc3_lif_Pipeline_VITIS_LOOP_162_2_fu_100                 |     |    |     |      |      |     |        |      |         |          |        |
+|         (grp_fc3_lif_Pipeline_VITIS_LOOP_162_2_fu_100)             |     |    |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|         p_ZL5fc3_w_0_U                                             |     |    |     |      |      |     |        |      |         |          |        |
+|     grp_snn_core_Pipeline_VITIS_LOOP_225_1_fu_234                  |     |    |     |      |      |     |        |      |         |          |        |
+|       flow_control_loop_pipe_sequential_init_U                     |     |    |     |      |      |     |        |      |         |          |        |
+|     grp_snn_core_Pipeline_VITIS_LOOP_231_2_fu_254                  |     |    |     |      |      |     |        |      |         |          |        |
+|       flow_control_loop_pipe_sequential_init_U                     |     |    |     |      |      |     |        |      |         |          |        |
+|     mem1_1_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|     mem1_2_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|     mem1_3_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|     mem1_U                                                         |     |    |     |      |      |     |        |      |         |          |        |
+|     mem2_1_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|     mem2_2_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|     mem2_3_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|     mem2_U                                                         |     |    |     |      |      |     |        |      |         |          |        |
+|     spk1_1_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|     spk1_2_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|     spk1_3_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|     spk1_U                                                         |     |    |     |      |      |     |        |      |         |          |        |
+|     spk2_1_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|     spk2_2_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|     spk2_3_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|     spk2_U                                                         |     |    |     |      |      |     |        |      |         |          |        |
++--------------------------------------------------------------------+-----+----+-----+------+------+-----+--------+------+---------+----------+--------+
+
+
+================================================================
+== Place & Route Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 8.43%  | OK     |
+| FD                                                        | 50%       | 4.11%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 1.91%  | OK     |
+| MUXF7                                                     | 15%       | 0.01%  | OK     |
+| DSP                                                       | 80%       | 3.64%  | OK     |
+| RAMB/FIFO                                                 | 80%       | 13.93% | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 8.79%  | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 2      | REVIEW |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 998       | 148    | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 2.50   | OK     |
+| Max Average Fanout for modules > 100k cells               | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.575ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.403ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== Place & Route Timing Paths
+================================================================
+* Timing was met
++-------+-------+----------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN                                     | ENDPOINT PIN                                                                                                        | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                                                    |                                                                                                                     |              |            |                |          DELAY |        DELAY |
++-------+-------+----------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 1.415 | features_3_U/ram_reg/CLKBWRCLK                     | grp_snn_core_fu_239/grp_fc1_lif_fu_274/grp_fc1_lif_Pipeline_VITIS_LOOP_92_29_fu_342/icmp_ln99_reg_378_reg[0]/D      |            4 |         61 |          6.578 |          2.950 |        3.628 |
+| Path2 | 1.572 | features_1_U/ram_reg/CLKBWRCLK                     | grp_snn_core_fu_239/grp_fc1_lif_fu_274/grp_fc1_lif_Pipeline_VITIS_LOOP_92_28_fu_326/trunc_ln100_2_reg_397_reg/A[4]  |            2 |          5 |          5.982 |          2.702 |        3.280 |
+| Path3 | 1.581 | grp_snn_core_fu_239/logits_out_1_0_fu_138_reg[3]/C | grp_snn_core_fu_239/icmp_ln186_reg_737_reg[0]/D                                                                     |           10 |         65 |          6.185 |          2.734 |        3.451 |
+| Path4 | 1.602 | features_3_U/ram_reg/CLKBWRCLK                     | grp_snn_core_fu_239/grp_fc1_lif_fu_274/grp_fc1_lif_Pipeline_VITIS_LOOP_92_28_fu_326/trunc_ln100_2_reg_397_reg/A[25] |            2 |         61 |          5.952 |          2.702 |        3.250 |
+| Path5 | 1.612 | features_3_U/ram_reg/CLKBWRCLK                     | grp_snn_core_fu_239/grp_fc1_lif_fu_274/grp_fc1_lif_Pipeline_VITIS_LOOP_92_28_fu_326/trunc_ln100_2_reg_397_reg/A[3]  |            2 |          5 |          5.942 |          2.702 |        3.240 |
++-------+-------+----------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +----------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path1 Cells                                                                                                    | Primitive Type       |
+    +----------------------------------------------------------------------------------------------------------------+----------------------+
+    | features_3_U/ram_reg                                                                                           | BMEM.bram.RAMB18E1   |
+    | grp_snn_core_fu_239/grp_fc1_lif_fu_274/grp_fc1_lif_Pipeline_VITIS_LOOP_92_29_fu_342/trunc_ln5_reg_397_reg_i_17 | LUT.others.LUT6      |
+    | grp_snn_core_fu_239/grp_fc1_lif_fu_274/grp_fc1_lif_Pipeline_VITIS_LOOP_92_29_fu_342/trunc_ln5_reg_397_reg_i_1  | LUT.others.LUT6      |
+    | grp_snn_core_fu_239/grp_fc1_lif_fu_274/grp_fc1_lif_Pipeline_VITIS_LOOP_92_29_fu_342/icmp_ln99_reg_378[0]_i_2   | LUT.others.LUT6      |
+    | grp_snn_core_fu_239/grp_fc1_lif_fu_274/grp_fc1_lif_Pipeline_VITIS_LOOP_92_29_fu_342/icmp_ln99_reg_378[0]_i_1   | LUT.others.LUT6      |
+    | grp_snn_core_fu_239/grp_fc1_lif_fu_274/grp_fc1_lif_Pipeline_VITIS_LOOP_92_29_fu_342/icmp_ln99_reg_378_reg[0]   | FLOP_LATCH.flop.FDRE |
+    +----------------------------------------------------------------------------------------------------------------+----------------------+
+
+    +----------------------------------------------------------------------------------------------------------------+--------------------+
+    | Path2 Cells                                                                                                    | Primitive Type     |
+    +----------------------------------------------------------------------------------------------------------------+--------------------+
+    | features_1_U/ram_reg                                                                                           | BMEM.bram.RAMB18E1 |
+    | grp_snn_core_fu_239/grp_fc1_lif_fu_274/grp_fc1_lif_Pipeline_VITIS_LOOP_92_29_fu_342/trunc_ln5_reg_397_reg_i_28 | LUT.others.LUT6    |
+    | grp_snn_core_fu_239/grp_fc1_lif_fu_274/grp_fc1_lif_Pipeline_VITIS_LOOP_92_29_fu_342/trunc_ln5_reg_397_reg_i_12 | LUT.others.LUT6    |
+    | grp_snn_core_fu_239/grp_fc1_lif_fu_274/grp_fc1_lif_Pipeline_VITIS_LOOP_92_28_fu_326/trunc_ln100_2_reg_397_reg  | MULT.dsp.DSP48E1   |
+    +----------------------------------------------------------------------------------------------------------------+--------------------+
+
+    +----------------------------------------------------+----------------------+
+    | Path3 Cells                                        | Primitive Type       |
+    +----------------------------------------------------+----------------------+
+    | grp_snn_core_fu_239/logits_out_1_0_fu_138_reg[3]   | FLOP_LATCH.flop.FDRE |
+    | grp_snn_core_fu_239/best_reg_727[0]_i_35           | LUT.others.LUT4      |
+    | grp_snn_core_fu_239/best_reg_727_reg[0]_i_20       | CARRY.others.CARRY4  |
+    | grp_snn_core_fu_239/best_reg_727_reg[0]_i_11       | CARRY.others.CARRY4  |
+    | grp_snn_core_fu_239/best_reg_727_reg[0]_i_2        | CARRY.others.CARRY4  |
+    | grp_snn_core_fu_239/best_reg_727_reg[0]_i_1        | CARRY.others.CARRY4  |
+    | grp_snn_core_fu_239/best_val_2_reg_732[8]_i_1      | LUT.others.LUT3      |
+    | grp_snn_core_fu_239/icmp_ln186_reg_737[0]_i_24     | LUT.others.LUT6      |
+    | grp_snn_core_fu_239/icmp_ln186_reg_737_reg[0]_i_11 | CARRY.others.CARRY4  |
+    | grp_snn_core_fu_239/icmp_ln186_reg_737_reg[0]_i_2  | CARRY.others.CARRY4  |
+    | grp_snn_core_fu_239/icmp_ln186_reg_737_reg[0]_i_1  | CARRY.others.CARRY4  |
+    | grp_snn_core_fu_239/icmp_ln186_reg_737_reg[0]      | FLOP_LATCH.flop.FDRE |
+    +----------------------------------------------------+----------------------+
+
+    +----------------------------------------------------------------------------------------------------------------+--------------------+
+    | Path4 Cells                                                                                                    | Primitive Type     |
+    +----------------------------------------------------------------------------------------------------------------+--------------------+
+    | features_3_U/ram_reg                                                                                           | BMEM.bram.RAMB18E1 |
+    | grp_snn_core_fu_239/grp_fc1_lif_fu_274/grp_fc1_lif_Pipeline_VITIS_LOOP_92_29_fu_342/trunc_ln5_reg_397_reg_i_17 | LUT.others.LUT6    |
+    | grp_snn_core_fu_239/grp_fc1_lif_fu_274/grp_fc1_lif_Pipeline_VITIS_LOOP_92_29_fu_342/trunc_ln5_reg_397_reg_i_1  | LUT.others.LUT6    |
+    | grp_snn_core_fu_239/grp_fc1_lif_fu_274/grp_fc1_lif_Pipeline_VITIS_LOOP_92_28_fu_326/trunc_ln100_2_reg_397_reg  | MULT.dsp.DSP48E1   |
+    +----------------------------------------------------------------------------------------------------------------+--------------------+
+
+    +----------------------------------------------------------------------------------------------------------------+--------------------+
+    | Path5 Cells                                                                                                    | Primitive Type     |
+    +----------------------------------------------------------------------------------------------------------------+--------------------+
+    | features_3_U/ram_reg                                                                                           | BMEM.bram.RAMB18E1 |
+    | grp_snn_core_fu_239/grp_fc1_lif_fu_274/grp_fc1_lif_Pipeline_VITIS_LOOP_92_29_fu_342/trunc_ln5_reg_397_reg_i_29 | LUT.others.LUT6    |
+    | grp_snn_core_fu_239/grp_fc1_lif_fu_274/grp_fc1_lif_Pipeline_VITIS_LOOP_92_29_fu_342/trunc_ln5_reg_397_reg_i_13 | LUT.others.LUT6    |
+    | grp_snn_core_fu_239/grp_fc1_lif_fu_274/grp_fc1_lif_Pipeline_VITIS_LOOP_92_28_fu_326/trunc_ln100_2_reg_397_reg  | MULT.dsp.DSP48E1   |
+    +----------------------------------------------------------------------------------------------------------------+--------------------+
+
+
+================================================================
+== Place & Route Vivado Reports
+================================================================
++--------------------------+-----------------------------------------------------------------+
+| Report Type              | Report Location                                                 |
++--------------------------+-----------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/snn_mlp_design_analysis_routed.rpt          |
+| failfast                 | impl/verilog/report/snn_mlp_failfast_routed.rpt                 |
+| power                    | impl/verilog/report/snn_mlp_power_routed.rpt                    |
+| status                   | impl/verilog/report/snn_mlp_status_routed.rpt                   |
+| timing                   | impl/verilog/report/snn_mlp_timing_routed.rpt                   |
+| timing_paths             | impl/verilog/report/snn_mlp_timing_paths_routed.rpt             |
+| utilization              | impl/verilog/report/snn_mlp_utilization_routed.rpt              |
+| utilization_hierarchical | impl/verilog/report/snn_mlp_utilization_hierarchical_routed.rpt |
++--------------------------+-----------------------------------------------------------------+
+
+

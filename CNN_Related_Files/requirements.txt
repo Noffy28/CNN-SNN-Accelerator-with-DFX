@@ -1,0 +1,9 @@
+
+tensorflow==2.21.0
+numpy==2.5.4
+opencv-python==5.0.0.93
+matplotlib==3.11.2
+scikit-learn==1.9.1
+albumentations==2.0.8
+pyserial==3.5
+h5py==3.14.0

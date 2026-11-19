@@ -1,0 +1,219 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "4 3 10 14",
+    "control_depth": 1,
+    "def_use_depth": 2,
+    "file": "ds_cnn.cpp",
+    "fileloc": 208,
+    "instructions": 34,
+    "loads": {
+      "T": 1
+    },
+    "memory_accesses": 2,
+    "name": "ds_cnn",
+    "stores": {
+      "G": 1,
+      "T": 1
+    },
+    "total_instructions": 4524
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "ds_cnn.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 17,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.3",
+    "total_instructions": 6177
+  },
+  "10": {
+    "basicblocks": 31,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 2,
+    "file": "ds_cnn.cpp",
+    "fileloc": 129,
+    "instructions": 108,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 1,
+    "name": "avgpool6x8",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 720
+  },
+  "11": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "ds_cnn.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 33,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.6",
+    "total_instructions": 12353
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "ds_cnn.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 5,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.7",
+    "total_instructions": 1545
+  },
+  "13": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "ds_cnn.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 9,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.5",
+    "total_instructions": 3089
+  },
+  "14": {
+    "basicblocks": 51,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 2,
+    "file": "ds_cnn.cpp",
+    "fileloc": 155,
+    "instructions": 198,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 11,
+    "name": "cls_gap_logits_argmax",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 1414
+  },
+  "2": {
+    "basicblocks": 4,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "ds_cnn.cpp",
+    "fileloc": 11,
+    "instructions": 9,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "relu_dt",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 148
+  },
+  "3": {
+    "basicblocks": 47,
+    "calls": "2 2",
+    "control_depth": 3,
+    "def_use_depth": 4,
+    "file": "ds_cnn.cpp",
+    "fileloc": 71,
+    "instructions": 176,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 7,
+    "name": "depthwise_pointwise_relu_fused",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 1476
+  },
+  "4": {
+    "basicblocks": 46,
+    "calls": "2",
+    "control_depth": 3,
+    "def_use_depth": 4,
+    "file": "ds_cnn.cpp",
+    "fileloc": 19,
+    "instructions": 145,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 5,
+    "name": "conv1_relu_maxpool",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 880
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "ds_cnn.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 145,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 55585
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "5 9 7 1 8 13 11 12",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "ds_cnn.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 9,
+    "memory_accesses": 0,
+    "name": "",
+    "total_instructions": 189929
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "ds_cnn.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 145,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.2",
+    "total_instructions": 55585
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "ds_cnn.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 129,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.4",
+    "total_instructions": 49409
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "ds_cnn.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 17,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.1",
+    "total_instructions": 6177
+  }
+}

@@ -1,0 +1,192 @@
+
+
+================================================================
+== Vitis HLS Report for 'fc2_lif_Pipeline_VITIS_LOOP_130_2'
+================================================================
+* Date:           Tue Nov 17 10:24:21 2026
+
+* Version:        2026.1 (Build 6493734 on Jun 16 2026)
+* Project:        snn_mlp
+* Solution:       hls
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  8.00 ns|  5.077 ns|     2.16 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |       68|       68|  0.544 us|  0.544 us|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_130_2  |       66|       66|         4|          1|          1|    64|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.04>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%acc_04 = alloca i32 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:128]   --->   Operation 7 'alloca' 'acc_04' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:130]   --->   Operation 8 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%zext_ln134_read = read i9 @_ssdm_op_Read.ap_auto.i9, i9 %zext_ln134"   --->   Operation 9 'read' 'zext_ln134_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%sext_ln128_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %sext_ln128"   --->   Operation 10 'read' 'sext_ln128_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%sext_ln128_cast = sext i8 %sext_ln128_read"   --->   Operation 11 'sext' 'sext_ln128_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (1.58ns)   --->   "%store_ln130 = store i7 0, i7 %i" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:130]   --->   Operation 12 'store' 'store_ln130' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 13 [1/1] (1.58ns)   --->   "%store_ln128 = store i32 %sext_ln128_cast, i32 %acc_04" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:128]   --->   Operation 13 'store' 'store_ln128' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body4"   --->   Operation 14 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%i_7 = load i7 %i" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:130]   --->   Operation 15 'load' 'i_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (1.87ns)   --->   "%icmp_ln130 = icmp_eq  i7 %i_7, i7 64" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:130]   --->   Operation 16 'icmp' 'icmp_ln130' <Predicate = true> <Delay = 1.87> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (1.87ns)   --->   "%add_ln130 = add i7 %i_7, i7 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:130]   --->   Operation 17 'add' 'add_ln130' <Predicate = true> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln130 = br i1 %icmp_ln130, void %for.body4.split_ifconv, void %for.end.exitStub" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:130]   --->   Operation 18 'br' 'br_ln130' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.58ns)   --->   "%store_ln130 = store i7 %add_ln130, i7 %i" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:130]   --->   Operation 19 'store' 'store_ln130' <Predicate = (!icmp_ln130)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 5.07>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%zext_ln134_7 = zext i7 %i_7" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:134]   --->   Operation 20 'zext' 'zext_ln134_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (1.82ns)   --->   "%add_ln134 = add i9 %zext_ln134_read, i9 %zext_ln134_7" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:134]   --->   Operation 21 'add' 'add_ln134' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln134_8 = zext i9 %add_ln134" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:134]   --->   Operation 22 'zext' 'zext_ln134_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%p_ZL5fc2_w_0_addr = getelementptr i10 %p_ZL5fc2_w_0, i64 0, i64 %zext_ln134_8" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:134]   --->   Operation 23 'getelementptr' 'p_ZL5fc2_w_0_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%trunc_ln130 = trunc i7 %i_7" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:130]   --->   Operation 24 'trunc' 'trunc_ln130' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%lshr_ln2 = partselect i4 @_ssdm_op_PartSelect.i4.i7.i32.i32, i7 %i_7, i32 2, i32 5" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:128]   --->   Operation 25 'partselect' 'lshr_ln2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%zext_ln128 = zext i4 %lshr_ln2" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:128]   --->   Operation 26 'zext' 'zext_ln128' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%spk1_0_addr = getelementptr i1 %spk1_0, i64 0, i64 %zext_ln128" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:133]   --->   Operation 27 'getelementptr' 'spk1_0_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%spk1_1_addr = getelementptr i1 %spk1_1, i64 0, i64 %zext_ln128" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:133]   --->   Operation 28 'getelementptr' 'spk1_1_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%spk1_2_addr = getelementptr i1 %spk1_2, i64 0, i64 %zext_ln128" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:133]   --->   Operation 29 'getelementptr' 'spk1_2_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%spk1_3_addr = getelementptr i1 %spk1_3, i64 0, i64 %zext_ln128" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:133]   --->   Operation 30 'getelementptr' 'spk1_3_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [2/2] (2.32ns)   --->   "%spk1_0_load = load i4 %spk1_0_addr" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:133]   --->   Operation 31 'load' 'spk1_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 16> <RAM>
+ST_2 : Operation 32 [2/2] (2.32ns)   --->   "%spk1_1_load = load i4 %spk1_1_addr" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:133]   --->   Operation 32 'load' 'spk1_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 16> <RAM>
+ST_2 : Operation 33 [2/2] (2.32ns)   --->   "%spk1_2_load = load i4 %spk1_2_addr" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:133]   --->   Operation 33 'load' 'spk1_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 16> <RAM>
+ST_2 : Operation 34 [2/2] (2.32ns)   --->   "%spk1_3_load = load i4 %spk1_3_addr" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:133]   --->   Operation 34 'load' 'spk1_3_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 16> <RAM>
+ST_2 : Operation 35 [2/2] (3.25ns)   --->   "%p_ZL5fc2_w_0_load = load i9 %p_ZL5fc2_w_0_addr" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:134]   --->   Operation 35 'load' 'p_ZL5fc2_w_0_load' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 512> <ROM>
+
+State 3 <SV = 2> <Delay = 4.14>
+ST_3 : Operation 36 [1/2] ( I:2.32ns O:2.32ns )   --->   "%spk1_0_load = load i4 %spk1_0_addr" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:133]   --->   Operation 36 'load' 'spk1_0_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 16> <RAM>
+ST_3 : Operation 37 [1/2] ( I:2.32ns O:2.32ns )   --->   "%spk1_1_load = load i4 %spk1_1_addr" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:133]   --->   Operation 37 'load' 'spk1_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 16> <RAM>
+ST_3 : Operation 38 [1/2] ( I:2.32ns O:2.32ns )   --->   "%spk1_2_load = load i4 %spk1_2_addr" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:133]   --->   Operation 38 'load' 'spk1_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 16> <RAM>
+ST_3 : Operation 39 [1/2] ( I:2.32ns O:2.32ns )   --->   "%spk1_3_load = load i4 %spk1_3_addr" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:133]   --->   Operation 39 'load' 'spk1_3_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 16> <RAM>
+ST_3 : Operation 40 [1/1] (1.82ns)   --->   "%tmp = sparsemux i1 @_ssdm_op_SparseMux.ap_auto.4i1.i1.i2, i2 0, i1 %spk1_0_load, i2 1, i1 %spk1_1_load, i2 2, i1 %spk1_2_load, i2 3, i1 %spk1_3_load, i1 0, i2 %trunc_ln130" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:133]   --->   Operation 40 'sparsemux' 'tmp' <Predicate = true> <Delay = 1.82> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 137 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 41 [1/2] ( I:3.25ns O:3.25ns )   --->   "%p_ZL5fc2_w_0_load = load i9 %p_ZL5fc2_w_0_addr" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:134]   --->   Operation 41 'load' 'p_ZL5fc2_w_0_load' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 512> <ROM>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%acc_04_load_1 = load i32 %acc_04"   --->   Operation 51 'load' 'acc_04_load_1' <Predicate = (icmp_ln130)> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %acc_04_out, i32 %acc_04_load_1"   --->   Operation 52 'write' 'write_ln0' <Predicate = (icmp_ln130)> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 53 'ret' 'ret_ln0' <Predicate = (icmp_ln130)> <Delay = 1.58>
+
+State 4 <SV = 3> <Delay = 4.14>
+ST_4 : Operation 42 [1/1] (0.00ns)   --->   "%acc_04_load = load i32 %acc_04" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:134]   --->   Operation 42 'load' 'acc_04_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%specpipeline_ln131 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, i32 4294967295, void @empty_20" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:131]   --->   Operation 43 'specpipeline' 'specpipeline_ln131' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%speclooptripcount_ln128 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 64, i64 64, i64 64" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:128]   --->   Operation 44 'speclooptripcount' 'speclooptripcount_ln128' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 45 [1/1] (0.00ns)   --->   "%specloopname_ln130 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:130]   --->   Operation 45 'specloopname' 'specloopname_ln130' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 46 [1/1] (0.00ns) (grouped into LUT with out node acc)   --->   "%sext_ln134 = sext i10 %p_ZL5fc2_w_0_load" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:134]   --->   Operation 46 'sext' 'sext_ln134' <Predicate = (tmp)> <Delay = 0.00>
+ST_4 : Operation 47 [1/1] (0.00ns) (grouped into LUT with out node acc)   --->   "%empty = select i1 %tmp, i32 %sext_ln134, i32 0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:133]   --->   Operation 47 'select' 'empty' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 48 [1/1] (2.55ns) (out node of the LUT)   --->   "%acc = add i32 %acc_04_load, i32 %empty" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:134]   --->   Operation 48 'add' 'acc' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 49 [1/1] (1.58ns)   --->   "%store_ln128 = store i32 %acc, i32 %acc_04" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:128]   --->   Operation 49 'store' 'store_ln128' <Predicate = true> <Delay = 1.58>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%br_ln130 = br void %for.body4" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:130]   --->   Operation 50 'br' 'br_ln130' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8.000ns, clock uncertainty: 2.160ns.
+
+ <State 1>: 5.046ns
+The critical path consists of the following:
+	'store' operation ('store_ln130', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:130) of constant 0 7 bit on local variable 'i', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:130 [14]  (1.588 ns)
+	'load' operation 7 bit ('i', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:130) on local variable 'i', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:130 [18]  (0.000 ns)
+	'add' operation 7 bit ('add_ln130', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:130) [20]  (1.870 ns)
+	'store' operation ('store_ln130', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:130) of variable 'add_ln130', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:130 7 bit on local variable 'i', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:130 [47]  (1.588 ns)
+
+ <State 2>: 5.077ns
+The critical path consists of the following:
+	'add' operation 9 bit ('add_ln134', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:134) [25]  (1.823 ns)
+	'getelementptr' operation 9 bit ('p_ZL5fc2_w_0_addr', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:134) [27]  (0.000 ns)
+	'load' operation 10 bit ('p_ZL5fc2_w_0_load', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:134) on array 'p_ZL5fc2_w_0' [43]  (3.254 ns)
+
+ <State 3>: 4.149ns
+The critical path consists of the following:
+	'load' operation 1 bit ('spk1_0_load', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:133) on array 'spk1_0' [38]  (2.322 ns)
+	'sparsemux' operation 1 bit ('tmp', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:133) [42]  (1.827 ns)
+
+ <State 4>: 4.140ns
+The critical path consists of the following:
+	'load' operation 32 bit ('acc_04_load', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:134) on local variable 'acc', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:128 [23]  (0.000 ns)
+	'add' operation 32 bit ('acc', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:134) [46]  (2.552 ns)
+	'store' operation ('store_ln128', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:128) of variable 'acc', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:134 32 bit on local variable 'acc', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:128 [48]  (1.588 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'snn_core'" level="0">
+<item name = "Date">Tue Nov 17 10:24:25 2026
+</item>
+<item name = "Version">2026.1 (Build 6493734 on Jun 16 2026)</item>
+<item name = "Project">snn_mlp</item>
+<item name = "Solution">hls</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">8.00 ns, 5.959 ns, 2.16 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">76415, 76415, 0.611 ms, 0.611 ms, 76415, 76415, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_snn_core_Pipeline_VITIS_LOOP_225_1_fu_234">snn_core_Pipeline_VITIS_LOOP_225_1, 66, 66, 0.528 us, 0.528 us, 0, 0, loop pipeline stp</column>
+<column name="grp_snn_core_Pipeline_VITIS_LOOP_231_2_fu_254">snn_core_Pipeline_VITIS_LOOP_231_2, 34, 34, 0.272 us, 0.272 us, 0, 0, loop pipeline stp</column>
+<column name="grp_fc1_lif_fu_274">fc1_lif, 12849, 12849, 0.103 ms, 0.103 ms, 12849, 12849, no</column>
+<column name="grp_fc2_lif_fu_322">fc2_lif, 2265, 2265, 18.120 us, 18.120 us, 2265, 2265, no</column>
+<column name="grp_fc3_lif_fu_354">fc3_lif, 148, 148, 1.184 us, 1.184 us, 148, 148, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_244_4">76345, 76345, 15269, -, -, 5, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

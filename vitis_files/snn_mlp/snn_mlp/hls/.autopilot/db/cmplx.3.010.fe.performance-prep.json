@@ -1,0 +1,110 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "2 5",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "snn_mlp.cpp",
+    "fileloc": 269,
+    "instructions": 87,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 0,
+    "name": "snn_mlp",
+    "stores": {
+      "T": 5
+    },
+    "total_instructions": 2070
+  },
+  "1": {
+    "basicblocks": 19,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 9,
+    "file": "snn_mlp.cpp",
+    "fileloc": 111,
+    "instructions": 203,
+    "loads": {
+      "G": 8,
+      "L": 20
+    },
+    "memory_accesses": 20,
+    "name": "fc2_lif",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 203
+  },
+  "2": {
+    "basicblocks": 27,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "snn_mlp.cpp",
+    "fileloc": 53,
+    "instructions": 103,
+    "memory_accesses": 17,
+    "name": "read_features_from_bram",
+    "stores": {
+      "L": 10
+    },
+    "total_instructions": 103
+  },
+  "3": {
+    "basicblocks": 27,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 9,
+    "file": "snn_mlp.cpp",
+    "fileloc": 72,
+    "instructions": 255,
+    "loads": {
+      "G": 12,
+      "L": 12
+    },
+    "memory_accesses": 16,
+    "name": "fc1_lif",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 255
+  },
+  "4": {
+    "basicblocks": 17,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 8,
+    "file": "snn_mlp.cpp",
+    "fileloc": 145,
+    "instructions": 157,
+    "loads": {
+      "G": 4,
+      "L": 20
+    },
+    "memory_accesses": 20,
+    "name": "fc3_lif",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 157
+  },
+  "5": {
+    "basicblocks": 23,
+    "calls": "3 1 4 3 3 3 3",
+    "control_depth": 2,
+    "def_use_depth": 7,
+    "file": "snn_mlp.cpp",
+    "fileloc": 198,
+    "instructions": 245,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 18,
+    "name": "snn_core",
+    "stores": {
+      "L": 28
+    },
+    "total_instructions": 1880
+  }
+}

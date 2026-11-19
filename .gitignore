@@ -221,3 +221,22 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Vivado generated files
+*.jou
+*.log
+*.str
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.gen/
+*.Xil/
+*.wdb
+*.wcfg
+
+# OS files
+.DS_Store
+Thumbs.db

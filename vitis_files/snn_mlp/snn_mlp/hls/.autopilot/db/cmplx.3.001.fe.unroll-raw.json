@@ -1,0 +1,113 @@
+{
+  "0": {
+    "basicblocks": 4,
+    "calls": "4 2",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "snn_mlp.cpp",
+    "fileloc": 269,
+    "instructions": 39,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 0,
+    "name": "snn_mlp",
+    "stores": {
+      "T": 5
+    },
+    "total_instructions": 969
+  },
+  "1": {
+    "basicblocks": 49,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 7,
+    "file": "snn_mlp.cpp",
+    "fileloc": 72,
+    "instructions": 338,
+    "loads": {
+      "G": 12,
+      "L": 32
+    },
+    "memory_accesses": 24,
+    "name": "fc1_lif",
+    "stores": {
+      "L": 12
+    },
+    "total_instructions": 338
+  },
+  "2": {
+    "basicblocks": 27,
+    "calls": "1 3 5",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "snn_mlp.cpp",
+    "fileloc": 198,
+    "instructions": 174,
+    "loads": {
+      "L": 19
+    },
+    "memory_accesses": 4,
+    "name": "snn_core",
+    "stores": {
+      "L": 24
+    },
+    "total_instructions": 913
+  },
+  "3": {
+    "basicblocks": 41,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 5,
+    "file": "snn_mlp.cpp",
+    "fileloc": 111,
+    "instructions": 221,
+    "loads": {
+      "G": 8,
+      "L": 20
+    },
+    "memory_accesses": 8,
+    "name": "fc2_lif",
+    "stores": {
+      "L": 12
+    },
+    "total_instructions": 221
+  },
+  "4": {
+    "basicblocks": 5,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "snn_mlp.cpp",
+    "fileloc": 53,
+    "instructions": 17,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "read_features_from_bram",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 17
+  },
+  "5": {
+    "basicblocks": 40,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 5,
+    "file": "snn_mlp.cpp",
+    "fileloc": 145,
+    "instructions": 180,
+    "loads": {
+      "G": 4,
+      "L": 20
+    },
+    "memory_accesses": 8,
+    "name": "fc3_lif",
+    "stores": {
+      "L": 12
+    },
+    "total_instructions": 180
+  }
+}

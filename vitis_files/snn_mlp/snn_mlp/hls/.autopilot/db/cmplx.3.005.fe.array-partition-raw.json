@@ -1,0 +1,113 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "2 5",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "snn_mlp.cpp",
+    "fileloc": 269,
+    "instructions": 88,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 0,
+    "name": "snn_mlp",
+    "stores": {
+      "T": 5
+    },
+    "total_instructions": 3900
+  },
+  "1": {
+    "basicblocks": 35,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 7,
+    "file": "snn_mlp.cpp",
+    "fileloc": 111,
+    "instructions": 379,
+    "loads": {
+      "G": 8,
+      "L": 20
+    },
+    "memory_accesses": 20,
+    "name": "fc2_lif",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 379
+  },
+  "2": {
+    "basicblocks": 28,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "snn_mlp.cpp",
+    "fileloc": 53,
+    "instructions": 104,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 17,
+    "name": "read_features_from_bram",
+    "stores": {
+      "L": 10
+    },
+    "total_instructions": 104
+  },
+  "3": {
+    "basicblocks": 43,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 10,
+    "file": "snn_mlp.cpp",
+    "fileloc": 72,
+    "instructions": 581,
+    "loads": {
+      "G": 12,
+      "L": 12
+    },
+    "memory_accesses": 16,
+    "name": "fc1_lif",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 581
+  },
+  "4": {
+    "basicblocks": 17,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 8,
+    "file": "snn_mlp.cpp",
+    "fileloc": 145,
+    "instructions": 169,
+    "loads": {
+      "G": 4,
+      "L": 20
+    },
+    "memory_accesses": 20,
+    "name": "fc3_lif",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 169
+  },
+  "5": {
+    "basicblocks": 33,
+    "calls": "3 1 4 3 3 3 3",
+    "control_depth": 4,
+    "def_use_depth": 6,
+    "file": "snn_mlp.cpp",
+    "fileloc": 198,
+    "instructions": 255,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 20,
+    "name": "snn_core",
+    "stores": {
+      "L": 28
+    },
+    "total_instructions": 3708
+  }
+}

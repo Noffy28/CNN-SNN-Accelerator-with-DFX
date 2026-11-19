@@ -1,0 +1,164 @@
+
+
+================================================================
+== Vitis HLS Report for 'snn_core_Pipeline_VITIS_LOOP_231_2'
+================================================================
+* Date:           Tue Nov 17 10:24:27 2026
+
+* Version:        2026.1 (Build 6493734 on Jun 16 2026)
+* Project:        snn_mlp
+* Solution:       hls
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  8.00 ns|  5.735 ns|     2.16 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |       34|       34|  0.272 us|  0.272 us|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_231_2  |       32|       32|         1|          1|          1|    32|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     28|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     27|    -|
+|Register         |        -|    -|       8|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|       8|     55|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln231_fu_186_p2   |         +|   0|  0|  14|           6|           1|
+    |icmp_ln231_fu_180_p2  |      icmp|   0|  0|  14|           6|           7|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  28|          12|           8|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_done_int           |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_1  |   9|          2|    6|         12|
+    |i_fu_56               |   9|          2|    6|         12|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 |  27|          6|   13|         26|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    |i_fu_56      |  6|   0|    6|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        |  8|   0|    8|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+------------------------------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  |            Source Object           |    C Type    |
++-----------------+-----+-----+------------+------------------------------------+--------------+
+|ap_clk           |   in|    1|  ap_ctrl_hs|  snn_core_Pipeline_VITIS_LOOP_231_2|  return value|
+|ap_rst           |   in|    1|  ap_ctrl_hs|  snn_core_Pipeline_VITIS_LOOP_231_2|  return value|
+|ap_start         |   in|    1|  ap_ctrl_hs|  snn_core_Pipeline_VITIS_LOOP_231_2|  return value|
+|ap_done          |  out|    1|  ap_ctrl_hs|  snn_core_Pipeline_VITIS_LOOP_231_2|  return value|
+|ap_idle          |  out|    1|  ap_ctrl_hs|  snn_core_Pipeline_VITIS_LOOP_231_2|  return value|
+|ap_ready         |  out|    1|  ap_ctrl_hs|  snn_core_Pipeline_VITIS_LOOP_231_2|  return value|
+|spk2_3_address0  |  out|    3|   ap_memory|                              spk2_3|         array|
+|spk2_3_ce0       |  out|    1|   ap_memory|                              spk2_3|         array|
+|spk2_3_we0       |  out|    1|   ap_memory|                              spk2_3|         array|
+|spk2_3_d0        |  out|    1|   ap_memory|                              spk2_3|         array|
+|spk2_2_address0  |  out|    3|   ap_memory|                              spk2_2|         array|
+|spk2_2_ce0       |  out|    1|   ap_memory|                              spk2_2|         array|
+|spk2_2_we0       |  out|    1|   ap_memory|                              spk2_2|         array|
+|spk2_2_d0        |  out|    1|   ap_memory|                              spk2_2|         array|
+|spk2_1_address0  |  out|    3|   ap_memory|                              spk2_1|         array|
+|spk2_1_ce0       |  out|    1|   ap_memory|                              spk2_1|         array|
+|spk2_1_we0       |  out|    1|   ap_memory|                              spk2_1|         array|
+|spk2_1_d0        |  out|    1|   ap_memory|                              spk2_1|         array|
+|spk2_address0    |  out|    3|   ap_memory|                                spk2|         array|
+|spk2_ce0         |  out|    1|   ap_memory|                                spk2|         array|
+|spk2_we0         |  out|    1|   ap_memory|                                spk2|         array|
+|spk2_d0          |  out|    1|   ap_memory|                                spk2|         array|
+|mem2_3_address0  |  out|    3|   ap_memory|                              mem2_3|         array|
+|mem2_3_ce0       |  out|    1|   ap_memory|                              mem2_3|         array|
+|mem2_3_we0       |  out|    1|   ap_memory|                              mem2_3|         array|
+|mem2_3_d0        |  out|   32|   ap_memory|                              mem2_3|         array|
+|mem2_2_address0  |  out|    3|   ap_memory|                              mem2_2|         array|
+|mem2_2_ce0       |  out|    1|   ap_memory|                              mem2_2|         array|
+|mem2_2_we0       |  out|    1|   ap_memory|                              mem2_2|         array|
+|mem2_2_d0        |  out|   32|   ap_memory|                              mem2_2|         array|
+|mem2_1_address0  |  out|    3|   ap_memory|                              mem2_1|         array|
+|mem2_1_ce0       |  out|    1|   ap_memory|                              mem2_1|         array|
+|mem2_1_we0       |  out|    1|   ap_memory|                              mem2_1|         array|
+|mem2_1_d0        |  out|   32|   ap_memory|                              mem2_1|         array|
+|mem2_address0    |  out|    3|   ap_memory|                                mem2|         array|
+|mem2_ce0         |  out|    1|   ap_memory|                                mem2|         array|
+|mem2_we0         |  out|    1|   ap_memory|                                mem2|         array|
+|mem2_d0          |  out|   32|   ap_memory|                                mem2|         array|
++-----------------+-----+-----+------------+------------------------------------+--------------+
+

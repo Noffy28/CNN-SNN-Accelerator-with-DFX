@@ -1,0 +1,4 @@
+0: square
+1: circle
+2: figure_eight
+3: triangle

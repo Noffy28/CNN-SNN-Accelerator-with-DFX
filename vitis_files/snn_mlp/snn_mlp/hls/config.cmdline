@@ -1,0 +1,3 @@
+relativeroot=C:/Users/Chris/Documents/Vivado/Assignment_2/snn_mlp
+original_argv=--mode hls --package --config C:\Users\Chris\Documents\Vivado\Assignment_2\snn_mlp\hls_config.cfg --work_dir snn_mlp 
+

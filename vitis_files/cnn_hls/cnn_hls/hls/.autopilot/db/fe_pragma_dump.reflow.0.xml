@@ -1,0 +1,136 @@
+<pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="operator/" off="0" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="232" pragmaType="pipeline" parentfunction="ds_cnn" off="0" ii="1" rewind="0" style=""/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="214" pragmaType="interface" parentfunction="ds_cnn" mode="m_axi" port="input_img" bundle="gmem" offset="slave" name="" depth="4800" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="215" pragmaType="interface" parentfunction="ds_cnn" mode="s_axilite" port="input_img" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="216" pragmaType="interface" parentfunction="ds_cnn" mode="s_axilite" port="pred_out" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="217" pragmaType="interface" parentfunction="ds_cnn" mode="s_axilite" port="logits_out" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="218" pragmaType="interface" parentfunction="ds_cnn" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="226" pragmaType="bind_storage" parentfunction="ds_cnn" op="666" impl="22" latency="-1" variable="_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPiPS2_E3img"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="227" pragmaType="bind_storage" parentfunction="ds_cnn" op="666" impl="22" latency="-1" variable="_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPiPS2_E5pool1"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="228" pragmaType="bind_storage" parentfunction="ds_cnn" op="666" impl="22" latency="-1" variable="_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPiPS2_E2pw"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="229" pragmaType="bind_storage" parentfunction="ds_cnn" op="666" impl="23" latency="-1" variable="_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPiPS2_E4bins"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<13, true>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2026.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="ssdm_int<16, true>::ssdm_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<41, 21>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<41, 21>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<13, true>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<13, true>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2026.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="ssdm_int<12, true>::ssdm_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed<41, 21>::ap_fixed" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2026.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="ssdm_int<41, true>::ssdm_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="133" pragmaType="inline" parentfunction="avgpool6x8" off="1" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="140" pragmaType="pipeline" parentfunction="avgpool6x8" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::operator+" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed<16, 8>::ap_fixed" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed<24, 12>::ap_fixed" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2026.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="ssdm_int<55, true>::ssdm_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="operator-" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2026.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="530" pragmaType="inline" parentfunction="ssdm_int<1, false>::ssdm_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<55>::ap_int" off="0" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="23" pragmaType="inline" parentfunction="conv1_relu_maxpool" off="1" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="30" pragmaType="pipeline" parentfunction="conv1_relu_maxpool" off="0" ii="1" rewind="0" style=""/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="75" pragmaType="inline" parentfunction="depthwise_pointwise_relu_fused" off="1" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="87" pragmaType="pipeline" parentfunction="depthwise_pointwise_relu_fused" off="0" ii="1" rewind="0" style=""/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="113" pragmaType="pipeline" parentfunction="depthwise_pointwise_relu_fused" off="0" ii="1" rewind="0" style=""/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="82" pragmaType="array_partition" parentfunction="depthwise_pointwise_relu_fused" dim="1" factor="0" mode="complete" dynamic="0" variable="dw_relu"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed<24, 12>::ap_fixed" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::operator*" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<16, 8>::operator>" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<16, 8>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2026.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="ssdm_int<13, true>::ssdm_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed<24, 12>::ap_fixed" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::operator!" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<41, 21>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<55, true>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<55, true>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<41, 21>::operator!" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<55, true>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="159" pragmaType="inline" parentfunction="cls_gap_logits_argmax" off="1" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="172" pragmaType="pipeline" parentfunction="cls_gap_logits_argmax" off="0" ii="1" rewind="0" style=""/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="162" pragmaType="array_partition" parentfunction="cls_gap_logits_argmax" dim="1" factor="0" mode="complete" dynamic="0" variable="gap"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="183" pragmaType="array_partition" parentfunction="cls_gap_logits_argmax" dim="1" factor="0" mode="complete" dynamic="0" variable="logits"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<13>::ap_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed<16, 8>::ap_fixed" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<16, 8>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2026.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="ssdm_int<24, true>::ssdm_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<48, 24>::operator!" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2026.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="ssdm_int<25, true>::ssdm_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<40, 20>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<16, 8>::operator!" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed<16, 8>::ap_fixed" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<32, 32>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<16, 8>::operator*" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<25, 13>::operator!" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<25, 13>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<48, 24>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::operator*" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<40, 20>::operator!" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed<48, 24>::ap_fixed" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed<25, 13>::ap_fixed" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<32, 32>::operator!" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed<40, 20>::ap_fixed" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::operator/" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::operator+" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<25, 13>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<25, 13>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed<33, 17>::ap_fixed" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::operator+" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2026.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="ssdm_int<40, true>::ssdm_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed<32, 16>::ap_fixed" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<16, 8>::operator>" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<40, 32>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="operator>" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<33, 17>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<33, 17>::operator!" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2026.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="ssdm_int<33, true>::ssdm_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<33, 17>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<32, 16>::operator!" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<16, 8>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<33, 17>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<32, 16>::ap_fixed_base" off="0" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp" line="12" pragmaType="inline" parentfunction="relu_dt" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed<16, 8>::ap_fixed" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<54, true>::operator-" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<12, true>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="operator-" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2026.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="720" pragmaType="inline" parentfunction="doubleToRawBits" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<16, 8>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<54, true>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<41, 21>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<41, 21>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<40, 20>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<41, 21>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<41, 21>::report" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::report" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<16, 8>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::operator+=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<12, true>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::operator*=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<16, 8>::report" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::operator+=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<16, 8>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<33, 17>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<25, 13>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<33, 17>::report" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<40, 32>::report" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<48, 24>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<40, 32>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<25, 13>::report" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<25, 13>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<33, 17>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::operator+=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<33, 17>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<32, 16>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<25, 13>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_fixed_base<24, 12>::operator=" off="0" region="0" recursive="0"/>
+</pragmas>

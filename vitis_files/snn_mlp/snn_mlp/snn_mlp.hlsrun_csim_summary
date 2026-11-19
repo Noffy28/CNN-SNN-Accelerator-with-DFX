@@ -1,0 +1,43 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\Chris\\Documents\\Vivado\\Assignment_2\\snn_mlp\\snn_mlp\\snn_mlp.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "11/17/26 10:23:26",
+ "timestampMillis": "1794907406759",
+ "buildStep": {
+  "cmdId": "0e6206c1-af4c-4f2c-8bfb-bf634656640b",
+  "name": "vitis-run",
+  "logFile": "C:/Users\\Chris\\Documents\\Vivado\\Assignment_2\\snn_mlp\\snn_mlp\\logs\\snn_mlp.steps.log",
+  "commandLine": "C:/AMDDesignTools/2026.1/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\Users\\Chris\\Documents\\Vivado\\Assignment_2\\snn_mlp\\hls_config.cfg --work_dir snn_mlp ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "C:\\Users\\Chris\\Documents\\Vivado\\Assignment_2\\snn_mlp\\hls_config.cfg",
+   "--work_dir",
+   "snn_mlp"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\Chris\\Documents\\Vivado\\Assignment_2\\snn_mlp"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/17/26 10:23:26",
+ "timestampMillis": "1794907406760",
+ "status": {
+  "cmdId": "0e6206c1-af4c-4f2c-8bfb-bf634656640b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>

@@ -1,0 +1,254 @@
+{
+    "1": {
+        "name": "cls_gap_logits_argmax_Pipeline_VITIS_LOOP_185_6",
+        "file": "C:\/Users\/Chris\/Documents\/Vivado\/pythonenv\/CNN_guest_lecture\/code\/ds_cnn.cpp",
+        "fileloc": "182",
+        "instructions": "119",
+        "total_instructions": "119",
+        "calls": "",
+        "basicblocks": "9",
+        "memory_accesses": "19",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "G": "8",
+            "L": "5"
+        },
+        "stores": {
+            "L": "6",
+            "T": "1"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "cls_gap_logits_argmax_Pipeline_VITIS_LOOP_198_8",
+        "file": "C:\/Users\/Chris\/Documents\/Vivado\/pythonenv\/CNN_guest_lecture\/code\/ds_cnn.cpp",
+        "fileloc": "195",
+        "instructions": "34",
+        "total_instructions": "34",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "6",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "avgpool6x8",
+        "file": "ds_cnn.cpp",
+        "fileloc": "129",
+        "instructions": "336",
+        "total_instructions": "336",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "59",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "G": "48",
+            "L": "5"
+        },
+        "stores": {
+            "G": "1",
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "ds_cnn_Pipeline_VITIS_LOOP_231_1",
+        "file": "C:\/Users\/Chris\/Documents\/Vivado\/pythonenv\/CNN_guest_lecture\/code\/ds_cnn.cpp",
+        "fileloc": "231",
+        "instructions": "85",
+        "total_instructions": "85",
+        "calls": "",
+        "basicblocks": "16",
+        "memory_accesses": "17",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "G": "8",
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "cls_gap_logits_argmax_Pipeline_VITIS_LOOP_178_5",
+        "file": "C:\/Users\/Chris\/Documents\/Vivado\/pythonenv\/CNN_guest_lecture\/code\/ds_cnn.cpp",
+        "fileloc": "178",
+        "instructions": "65",
+        "total_instructions": "65",
+        "calls": "",
+        "basicblocks": "24",
+        "memory_accesses": "26",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_85_3",
+        "file": "C:\/Users\/Chris\/Documents\/Vivado\/pythonenv\/CNN_guest_lecture\/code\/ds_cnn.cpp",
+        "fileloc": "81",
+        "instructions": "432",
+        "total_instructions": "432",
+        "calls": "",
+        "basicblocks": "21",
+        "memory_accesses": "109",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "G": "91",
+            "L": "17"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "cls_gap_logits_argmax",
+        "file": "ds_cnn.cpp",
+        "fileloc": "155",
+        "instructions": "43",
+        "total_instructions": "368",
+        "calls": "8 5 1 2",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "13"
+        },
+        "stores": {
+            "L": "8"
+        }
+    },
+    "0": {
+        "name": "ds_cnn",
+        "file": "ds_cnn.cpp",
+        "fileloc": "208",
+        "instructions": "67",
+        "total_instructions": "2209",
+        "calls": "4 11 9 3 7",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2"
+    },
+    "8": {
+        "name": "cls_gap_logits_argmax_Pipeline_VITIS_LOOP_168_2_VITIS_LOOP_169_3_VITIS_LOOP_170_",
+        "file": "C:\/Users\/Chris\/Documents\/Vivado\/pythonenv\/CNN_guest_lecture\/code\/ds_cnn.cpp",
+        "fileloc": "168",
+        "instructions": "107",
+        "total_instructions": "107",
+        "calls": "",
+        "basicblocks": "24",
+        "memory_accesses": "35",
+        "control_depth": "3",
+        "def_use_depth": "2",
+        "loads": {
+            "G": "1",
+            "L": "5"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "depthwise_pointwise_relu_fused",
+        "file": "ds_cnn.cpp",
+        "fileloc": "71",
+        "instructions": "176",
+        "total_instructions": "881",
+        "calls": "6 10",
+        "basicblocks": "7",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "20"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "10": {
+        "name": "depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_111_6",
+        "file": "C:\/Users\/Chris\/Documents\/Vivado\/pythonenv\/CNN_guest_lecture\/code\/ds_cnn.cpp",
+        "fileloc": "111",
+        "instructions": "273",
+        "total_instructions": "273",
+        "calls": "",
+        "basicblocks": "35",
+        "memory_accesses": "43",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "G": "17",
+            "L": "1"
+        },
+        "stores": {
+            "G": "24",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "11": {
+        "name": "conv1_relu_maxpool",
+        "file": "ds_cnn.cpp",
+        "fileloc": "19",
+        "instructions": "472",
+        "total_instructions": "472",
+        "calls": "",
+        "basicblocks": "20",
+        "memory_accesses": "61",
+        "control_depth": "3",
+        "def_use_depth": "2",
+        "loads": {
+            "G": "42",
+            "L": "5"
+        },
+        "stores": {
+            "G": "9",
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

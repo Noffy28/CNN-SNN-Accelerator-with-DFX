@@ -1,0 +1,103 @@
+<pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<32>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="operator+" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="116" pragmaType="inline" parentfunction="fc2_lif" off="1" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="126" pragmaType="unroll" parentfunction="fc2_lif" factor="4" skip_exit_check="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="131" pragmaType="pipeline" parentfunction="fc2_lif" off="0" ii="1" rewind="0" style=""/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="118" pragmaType="array_partition" parentfunction="fc2_lif" dim="1" factor="4" mode="cyclic" dynamic="0" variable="_ZL5fc2_w"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="119" pragmaType="array_partition" parentfunction="fc2_lif" dim="1" factor="4" mode="cyclic" dynamic="0" variable="_ZL5fc2_b"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="121" pragmaType="array_partition" parentfunction="fc2_lif" dim="1" factor="4" mode="cyclic" dynamic="0" variable="mem2"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="122" pragmaType="array_partition" parentfunction="fc2_lif" dim="1" factor="4" mode="cyclic" dynamic="0" variable="spk2"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="123" pragmaType="array_partition" parentfunction="fc2_lif" dim="1" factor="4" mode="cyclic" dynamic="0" variable="spk1"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="57" pragmaType="inline" parentfunction="read_features_from_bram" off="1" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="60" pragmaType="pipeline" parentfunction="read_features_from_bram" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<8>::ap_uint" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<32>::ap_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<1>::ap_uint" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::operator>" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="operator>>" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<65, true>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<65, true>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<65>::ap_int" off="0" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="178" pragmaType="inline" parentfunction="argmax_logits" off="0" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="184" pragmaType="unroll" parentfunction="argmax_logits" factor="-1" skip_exit_check="0"/>
+<pragma file="C:/AMDDesignTools/2026.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="ssdm_int<65, true>::ssdm_int" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2026.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="ssdm_int<64, true>::ssdm_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<64>::ap_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, true>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="203" pragmaType="inline" parentfunction="snn_core" off="1" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="256" pragmaType="unroll" parentfunction="snn_core" factor="-1" skip_exit_check="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="250" pragmaType="unroll" parentfunction="snn_core" factor="-1" skip_exit_check="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="238" pragmaType="unroll" parentfunction="snn_core" factor="-1" skip_exit_check="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="232" pragmaType="pipeline" parentfunction="snn_core" off="0" ii="1" rewind="0" style=""/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="226" pragmaType="pipeline" parentfunction="snn_core" off="0" ii="1" rewind="0" style=""/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="215" pragmaType="array_partition" parentfunction="snn_core" dim="1" factor="4" mode="cyclic" dynamic="0" variable="mem1"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="216" pragmaType="array_partition" parentfunction="snn_core" dim="1" factor="4" mode="cyclic" dynamic="0" variable="mem2"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="217" pragmaType="array_partition" parentfunction="snn_core" dim="1" factor="0" mode="complete" dynamic="0" variable="mem3"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="219" pragmaType="array_partition" parentfunction="snn_core" dim="1" factor="4" mode="cyclic" dynamic="0" variable="spk1"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="220" pragmaType="array_partition" parentfunction="snn_core" dim="1" factor="4" mode="cyclic" dynamic="0" variable="spk2"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="221" pragmaType="array_partition" parentfunction="snn_core" dim="1" factor="0" mode="complete" dynamic="0" variable="spk3"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="223" pragmaType="array_partition" parentfunction="snn_core" dim="1" factor="0" mode="complete" dynamic="0" variable="logits_sum"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="34" pragmaType="inline" parentfunction="lif_update" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::operator unsigned long long" off="0" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="150" pragmaType="inline" parentfunction="fc3_lif" off="1" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="158" pragmaType="unroll" parentfunction="fc3_lif" factor="4" skip_exit_check="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="163" pragmaType="pipeline" parentfunction="fc3_lif" off="0" ii="1" rewind="0" style=""/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="152" pragmaType="array_partition" parentfunction="fc3_lif" dim="1" factor="0" mode="complete" dynamic="0" variable="_ZL5fc3_w"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="153" pragmaType="array_partition" parentfunction="fc3_lif" dim="1" factor="0" mode="complete" dynamic="0" variable="_ZL5fc3_b"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="154" pragmaType="array_partition" parentfunction="fc3_lif" dim="1" factor="0" mode="complete" dynamic="0" variable="spk3"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="155" pragmaType="array_partition" parentfunction="fc3_lif" dim="1" factor="0" mode="complete" dynamic="0" variable="mem3"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<65, true>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<32>::ap_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, true>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<1>::ap_uint" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2026.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="ssdm_int<32, true>::ssdm_int" off="0" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="295" pragmaType="unroll" parentfunction="snn_mlp" factor="-1" skip_exit_check="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="274" pragmaType="interface" parentfunction="snn_mlp" mode="m_axi" port="feature_mem" bundle="gmem" offset="slave" name="" depth="1920" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="275" pragmaType="interface" parentfunction="snn_mlp" mode="s_axilite" port="feature_mem" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="276" pragmaType="interface" parentfunction="snn_mlp" mode="s_axilite" port="prediction" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="277" pragmaType="interface" parentfunction="snn_mlp" mode="s_axilite" port="logits_out" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="278" pragmaType="interface" parentfunction="snn_mlp" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="282" pragmaType="bind_storage" parentfunction="snn_mlp" op="666" impl="22" latency="-1" variable="features"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="283" pragmaType="array_partition" parentfunction="snn_mlp" dim="1" factor="0" mode="complete" dynamic="0" variable="features"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="288" pragmaType="array_partition" parentfunction="snn_mlp" dim="1" factor="0" mode="complete" dynamic="0" variable="local_logits"/>
+<pragma file="C:/AMDDesignTools/2026.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="530" pragmaType="inline" parentfunction="ssdm_int<8, false>::ssdm_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="operator*" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<8>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<32>::ap_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, true>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2026.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="530" pragmaType="inline" parentfunction="ssdm_int<1, false>::ssdm_int" off="0" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="77" pragmaType="inline" parentfunction="fc1_lif" off="1" region="0" recursive="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="88" pragmaType="unroll" parentfunction="fc1_lif" factor="4" skip_exit_check="0"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="93" pragmaType="pipeline" parentfunction="fc1_lif" off="0" ii="1" rewind="0" style=""/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="79" pragmaType="array_partition" parentfunction="fc1_lif" dim="1" factor="4" mode="cyclic" dynamic="0" variable="_ZL5fc1_w"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="80" pragmaType="array_partition" parentfunction="fc1_lif" dim="2" factor="2" mode="cyclic" dynamic="0" variable="_ZL5fc1_w"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="81" pragmaType="array_partition" parentfunction="fc1_lif" dim="1" factor="4" mode="cyclic" dynamic="0" variable="_ZL5fc1_b"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="83" pragmaType="array_partition" parentfunction="fc1_lif" dim="1" factor="2" mode="cyclic" dynamic="0" variable="x"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="84" pragmaType="array_partition" parentfunction="fc1_lif" dim="1" factor="4" mode="cyclic" dynamic="0" variable="mem1"/>
+<pragma file="C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp" line="85" pragmaType="array_partition" parentfunction="fc1_lif" dim="1" factor="4" mode="cyclic" dynamic="0" variable="spk1"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="operator!=" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2026.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="ssdm_int<16, true>::ssdm_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<32>::ap_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, true>::operator!=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, true>::checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<16>::operator=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::operator+=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="operator+=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::operator-=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<65, true>::checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::operator+=" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::operator+=" off="0" region="0" recursive="0"/>
+</pragmas>

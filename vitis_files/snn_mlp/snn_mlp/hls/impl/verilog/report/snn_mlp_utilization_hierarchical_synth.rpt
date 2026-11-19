@@ -1,0 +1,90 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Tue Nov 17 10:29:16 2026
+| Host         : ChristofferBJ running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 8 -file ./report/snn_mlp_utilization_hierarchical_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++--------------------------------------------------------------------------+--------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|                                 Instance                                 |                                  Module                                  | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++--------------------------------------------------------------------------+--------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| bd_0_wrapper                                                             |                                                                    (top) |       4694 |       4328 |     288 |   78 | 4368 |      8 |     23 |          8 |
+|   bd_0_i                                                                 |                                                                     bd_0 |       4694 |       4328 |     288 |   78 | 4368 |      8 |     23 |          8 |
+|     hls_inst                                                             |                                                          bd_0_hls_inst_0 |       4694 |       4328 |     288 |   78 | 4368 |      8 |     23 |          8 |
+|       inst                                                               |                                                  bd_0_hls_inst_0_snn_mlp |       4694 |       4328 |     288 |   78 | 4368 |      8 |     23 |          8 |
+|         (inst)                                                           |                                                  bd_0_hls_inst_0_snn_mlp |          1 |          0 |       0 |    1 |  170 |      0 |      0 |          0 |
+|         control_s_axi_U                                                  |                                    bd_0_hls_inst_0_snn_mlp_control_s_axi |        135 |        111 |      24 |    0 |  153 |      0 |      0 |          0 |
+|           (control_s_axi_U)                                              |                                    bd_0_hls_inst_0_snn_mlp_control_s_axi |         76 |         76 |       0 |    0 |  121 |      0 |      0 |          0 |
+|           int_logits_out                                                 |                                bd_0_hls_inst_0_snn_mlp_control_s_axi_ram |         59 |         35 |      24 |    0 |   32 |      0 |      0 |          0 |
+|         gmem_m_axi_U                                                     |                                       bd_0_hls_inst_0_snn_mlp_gmem_m_axi |        604 |        535 |       0 |   69 |  892 |      0 |      1 |          0 |
+|           load_unit_0                                                    |                                  bd_0_hls_inst_0_snn_mlp_gmem_m_axi_load |        255 |        186 |       0 |   69 |  315 |      0 |      1 |          0 |
+|             (load_unit_0)                                                |                                  bd_0_hls_inst_0_snn_mlp_gmem_m_axi_load |          3 |          3 |       0 |    0 |  107 |      0 |      0 |          0 |
+|             bus_wide_gen.rs_rdata_int                                    |                             bd_0_hls_inst_0_snn_mlp_gmem_m_axi_reg_slice |         62 |         62 |       0 |    0 |   71 |      0 |      0 |          0 |
+|             fifo_rreq                                                    |                  bd_0_hls_inst_0_snn_mlp_gmem_m_axi_fifo__parameterized0 |        120 |         53 |       0 |   67 |   81 |      0 |      0 |          0 |
+|               U_fifo_srl                                                 |                   bd_0_hls_inst_0_snn_mlp_gmem_m_axi_srl__parameterized0 |        105 |         38 |       0 |   67 |   67 |      0 |      0 |          0 |
+|           bus_read                                                       |                                  bd_0_hls_inst_0_snn_mlp_gmem_m_axi_read |        349 |        349 |       0 |    0 |  577 |      0 |      0 |          0 |
+|             rreq_burst_conv                                              |                       bd_0_hls_inst_0_snn_mlp_gmem_m_axi_burst_converter |        273 |        273 |       0 |    0 |  475 |      0 |      0 |          0 |
+|               burst_sequential                                           |                      bd_0_hls_inst_0_snn_mlp_gmem_m_axi_burst_sequential |        273 |        273 |       0 |    0 |  475 |      0 |      0 |          0 |
+|                 (burst_sequential)                                       |                      bd_0_hls_inst_0_snn_mlp_gmem_m_axi_burst_sequential |        155 |        155 |       0 |    0 |  332 |      0 |      0 |          0 |
+|                 rs_req                                                   |             bd_0_hls_inst_0_snn_mlp_gmem_m_axi_reg_slice__parameterized0 |        118 |        118 |       0 |    0 |  143 |      0 |      0 |          0 |
+|             rs_rdata                                                     |             bd_0_hls_inst_0_snn_mlp_gmem_m_axi_reg_slice__parameterized1 |         40 |         40 |       0 |    0 |   71 |      0 |      0 |          0 |
+|         grp_read_features_from_bram_fu_222                               |                          bd_0_hls_inst_0_snn_mlp_read_features_from_bram |         57 |         57 |       0 |    0 |   87 |      0 |      0 |          0 |
+|           grp_read_features_from_bram_Pipeline_VITIS_LOOP_59_1_fu_81     | bd_0_hls_inst_0_snn_mlp_read_features_from_bram_Pipeline_VITIS_LOOP_59_1 |         54 |         54 |       0 |    0 |   76 |      0 |      0 |          0 |
+|             (grp_read_features_from_bram_Pipeline_VITIS_LOOP_59_1_fu_81) | bd_0_hls_inst_0_snn_mlp_read_features_from_bram_Pipeline_VITIS_LOOP_59_1 |         46 |         46 |       0 |    0 |   74 |      0 |      0 |          0 |
+|         grp_snn_core_fu_239                                              |                                         bd_0_hls_inst_0_snn_mlp_snn_core |       3897 |       3625 |     264 |    8 | 3066 |      8 |     12 |          8 |
+|           (grp_snn_core_fu_239)                                          |                                         bd_0_hls_inst_0_snn_mlp_snn_core |        306 |        306 |       0 |    0 |  539 |      0 |      0 |          0 |
+|           grp_fc1_lif_fu_274                                             |                                          bd_0_hls_inst_0_snn_mlp_fc1_lif |       1134 |       1126 |       0 |    8 |  860 |      8 |      8 |          8 |
+|             (grp_fc1_lif_fu_274)                                         |                                          bd_0_hls_inst_0_snn_mlp_fc1_lif |        454 |        454 |       0 |    0 |  604 |      0 |      0 |          0 |
+|             grp_fc1_lif_Pipeline_VITIS_LOOP_92_27_fu_310                 |                bd_0_hls_inst_0_snn_mlp_fc1_lif_Pipeline_VITIS_LOOP_92_27 |        142 |        140 |       0 |    2 |   54 |      2 |      2 |          2 |
+|               (grp_fc1_lif_Pipeline_VITIS_LOOP_92_27_fu_310)             |                bd_0_hls_inst_0_snn_mlp_fc1_lif_Pipeline_VITIS_LOOP_92_27 |        107 |        105 |       0 |    2 |   52 |      0 |      0 |          2 |
+|             grp_fc1_lif_Pipeline_VITIS_LOOP_92_28_fu_326                 |                bd_0_hls_inst_0_snn_mlp_fc1_lif_Pipeline_VITIS_LOOP_92_28 |        160 |        158 |       0 |    2 |   54 |      2 |      2 |          2 |
+|               (grp_fc1_lif_Pipeline_VITIS_LOOP_92_28_fu_326)             |                bd_0_hls_inst_0_snn_mlp_fc1_lif_Pipeline_VITIS_LOOP_92_28 |        124 |        122 |       0 |    2 |   52 |      0 |      0 |          2 |
+|             grp_fc1_lif_Pipeline_VITIS_LOOP_92_29_fu_342                 |                bd_0_hls_inst_0_snn_mlp_fc1_lif_Pipeline_VITIS_LOOP_92_29 |        219 |        217 |       0 |    2 |   58 |      2 |      2 |          2 |
+|               (grp_fc1_lif_Pipeline_VITIS_LOOP_92_29_fu_342)             |                bd_0_hls_inst_0_snn_mlp_fc1_lif_Pipeline_VITIS_LOOP_92_29 |        185 |        183 |       0 |    2 |   56 |      0 |      0 |          2 |
+|             grp_fc1_lif_Pipeline_VITIS_LOOP_92_2_fu_294                  |                 bd_0_hls_inst_0_snn_mlp_fc1_lif_Pipeline_VITIS_LOOP_92_2 |        142 |        140 |       0 |    2 |   57 |      2 |      2 |          2 |
+|               (grp_fc1_lif_Pipeline_VITIS_LOOP_92_2_fu_294)              |                 bd_0_hls_inst_0_snn_mlp_fc1_lif_Pipeline_VITIS_LOOP_92_2 |        109 |        107 |       0 |    2 |   55 |      0 |      0 |          2 |
+|           grp_fc2_lif_fu_322                                             |                                          bd_0_hls_inst_0_snn_mlp_fc2_lif |        993 |        993 |       0 |    0 |  849 |      0 |      4 |          0 |
+|             (grp_fc2_lif_fu_322)                                         |                                          bd_0_hls_inst_0_snn_mlp_fc2_lif |        445 |        445 |       0 |    0 |  594 |      0 |      0 |          0 |
+|             grp_fc2_lif_Pipeline_VITIS_LOOP_130_24_fu_294                |               bd_0_hls_inst_0_snn_mlp_fc2_lif_Pipeline_VITIS_LOOP_130_24 |        130 |        130 |       0 |    0 |   56 |      0 |      1 |          0 |
+|               (grp_fc2_lif_Pipeline_VITIS_LOOP_130_24_fu_294)            |               bd_0_hls_inst_0_snn_mlp_fc2_lif_Pipeline_VITIS_LOOP_130_24 |         75 |         75 |       0 |    0 |   54 |      0 |      0 |          0 |
+|             grp_fc2_lif_Pipeline_VITIS_LOOP_130_25_fu_312                |               bd_0_hls_inst_0_snn_mlp_fc2_lif_Pipeline_VITIS_LOOP_130_25 |        130 |        130 |       0 |    0 |   56 |      0 |      1 |          0 |
+|               (grp_fc2_lif_Pipeline_VITIS_LOOP_130_25_fu_312)            |               bd_0_hls_inst_0_snn_mlp_fc2_lif_Pipeline_VITIS_LOOP_130_25 |         74 |         74 |       0 |    0 |   54 |      0 |      0 |          0 |
+|             grp_fc2_lif_Pipeline_VITIS_LOOP_130_26_fu_330                |               bd_0_hls_inst_0_snn_mlp_fc2_lif_Pipeline_VITIS_LOOP_130_26 |        140 |        140 |       0 |    0 |   56 |      0 |      1 |          0 |
+|               (grp_fc2_lif_Pipeline_VITIS_LOOP_130_26_fu_330)            |               bd_0_hls_inst_0_snn_mlp_fc2_lif_Pipeline_VITIS_LOOP_130_26 |         83 |         83 |       0 |    0 |   54 |      0 |      0 |          0 |
+|             grp_fc2_lif_Pipeline_VITIS_LOOP_130_2_fu_276                 |                bd_0_hls_inst_0_snn_mlp_fc2_lif_Pipeline_VITIS_LOOP_130_2 |        132 |        132 |       0 |    0 |   56 |      0 |      1 |          0 |
+|               (grp_fc2_lif_Pipeline_VITIS_LOOP_130_2_fu_276)             |                bd_0_hls_inst_0_snn_mlp_fc2_lif_Pipeline_VITIS_LOOP_130_2 |         78 |         78 |       0 |    0 |   54 |      0 |      0 |          0 |
+|           grp_fc3_lif_fu_354                                             |                                          bd_0_hls_inst_0_snn_mlp_fc3_lif |        875 |        875 |       0 |    0 |  537 |      0 |      0 |          0 |
+|             (grp_fc3_lif_fu_354)                                         |                                          bd_0_hls_inst_0_snn_mlp_fc3_lif |        373 |        373 |       0 |    0 |  285 |      0 |      0 |          0 |
+|             grp_fc3_lif_Pipeline_VITIS_LOOP_162_21_fu_115                |               bd_0_hls_inst_0_snn_mlp_fc3_lif_Pipeline_VITIS_LOOP_162_21 |        125 |        125 |       0 |    0 |   64 |      0 |      0 |          0 |
+|               (grp_fc3_lif_Pipeline_VITIS_LOOP_162_21_fu_115)            |               bd_0_hls_inst_0_snn_mlp_fc3_lif_Pipeline_VITIS_LOOP_162_21 |        104 |        104 |       0 |    0 |   53 |      0 |      0 |          0 |
+|             grp_fc3_lif_Pipeline_VITIS_LOOP_162_22_fu_130                |               bd_0_hls_inst_0_snn_mlp_fc3_lif_Pipeline_VITIS_LOOP_162_22 |        124 |        124 |       0 |    0 |   62 |      0 |      0 |          0 |
+|               (grp_fc3_lif_Pipeline_VITIS_LOOP_162_22_fu_130)            |               bd_0_hls_inst_0_snn_mlp_fc3_lif_Pipeline_VITIS_LOOP_162_22 |        104 |        104 |       0 |    0 |   52 |      0 |      0 |          0 |
+|             grp_fc3_lif_Pipeline_VITIS_LOOP_162_23_fu_145                |               bd_0_hls_inst_0_snn_mlp_fc3_lif_Pipeline_VITIS_LOOP_162_23 |        128 |        128 |       0 |    0 |   62 |      0 |      0 |          0 |
+|               (grp_fc3_lif_Pipeline_VITIS_LOOP_162_23_fu_145)            |               bd_0_hls_inst_0_snn_mlp_fc3_lif_Pipeline_VITIS_LOOP_162_23 |        104 |        104 |       0 |    0 |   52 |      0 |      0 |          0 |
+|             grp_fc3_lif_Pipeline_VITIS_LOOP_162_2_fu_100                 |                bd_0_hls_inst_0_snn_mlp_fc3_lif_Pipeline_VITIS_LOOP_162_2 |        125 |        125 |       0 |    0 |   64 |      0 |      0 |          0 |
+|               (grp_fc3_lif_Pipeline_VITIS_LOOP_162_2_fu_100)             |                bd_0_hls_inst_0_snn_mlp_fc3_lif_Pipeline_VITIS_LOOP_162_2 |        104 |        104 |       0 |    0 |   53 |      0 |      0 |          0 |
+|           mem1_1_U                                                       |                      bd_0_hls_inst_0_snn_mlp_snn_core_mem1_RAM_AUTO_1R1W |         67 |         35 |      32 |    0 |   32 |      0 |      0 |          0 |
+|           mem1_2_U                                                       |                    bd_0_hls_inst_0_snn_mlp_snn_core_mem1_RAM_AUTO_1R1W_9 |         67 |         35 |      32 |    0 |   32 |      0 |      0 |          0 |
+|           mem1_3_U                                                       |                   bd_0_hls_inst_0_snn_mlp_snn_core_mem1_RAM_AUTO_1R1W_10 |         67 |         35 |      32 |    0 |   32 |      0 |      0 |          0 |
+|           mem1_U                                                         |                   bd_0_hls_inst_0_snn_mlp_snn_core_mem1_RAM_AUTO_1R1W_11 |         68 |         36 |      32 |    0 |   32 |      0 |      0 |          0 |
+|           mem2_1_U                                                       |                      bd_0_hls_inst_0_snn_mlp_snn_core_mem2_RAM_AUTO_1R1W |         67 |         35 |      32 |    0 |   32 |      0 |      0 |          0 |
+|           mem2_2_U                                                       |                   bd_0_hls_inst_0_snn_mlp_snn_core_mem2_RAM_AUTO_1R1W_12 |         67 |         35 |      32 |    0 |   32 |      0 |      0 |          0 |
+|           mem2_3_U                                                       |                   bd_0_hls_inst_0_snn_mlp_snn_core_mem2_RAM_AUTO_1R1W_13 |         68 |         36 |      32 |    0 |   32 |      0 |      0 |          0 |
+|           mem2_U                                                         |                   bd_0_hls_inst_0_snn_mlp_snn_core_mem2_RAM_AUTO_1R1W_14 |         67 |         35 |      32 |    0 |   32 |      0 |      0 |          0 |
++--------------------------------------------------------------------------+--------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+
+

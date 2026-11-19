@@ -1,0 +1,156 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\Chris\\Documents\\Vivado\\Assignment_2\\snn_mlp\\snn_mlp\\snn_mlp.hlsrun_package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "11/17/26 10:32:54",
+ "timestampMillis": "1794907974276",
+ "buildStep": {
+  "cmdId": "234fbbef-1b41-4846-9ec4-c40e015c6d67",
+  "name": "vitis-run",
+  "logFile": "C:/Users\\Chris\\Documents\\Vivado\\Assignment_2\\snn_mlp\\snn_mlp\\logs\\snn_mlp.steps.log",
+  "commandLine": "C:/AMDDesignTools/2026.1/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --package --config C:\\Users\\Chris\\Documents\\Vivado\\Assignment_2\\snn_mlp\\hls_config.cfg --work_dir snn_mlp ",
+  "args": [
+   "--mode",
+   "hls",
+   "--package",
+   "--config",
+   "C:\\Users\\Chris\\Documents\\Vivado\\Assignment_2\\snn_mlp\\hls_config.cfg",
+   "--work_dir",
+   "snn_mlp"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\Chris\\Documents\\Vivado\\Assignment_2\\snn_mlp"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/17/26 10:32:54",
+ "timestampMillis": "1794907974277",
+ "status": {
+  "cmdId": "234fbbef-1b41-4846-9ec4-c40e015c6d67",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "11/17/26 10:33:03",
+ "timestampMillis": "1794907983550",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IP",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "snn_mlp",
+     "file": "C:/Users\\Chris\\Documents\\Vivado\\Assignment_2\\snn_mlp\\snn_mlp\\snn_mlp.zip",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/Users\\Chris\\Documents\\Vivado\\pythontorch\\SNN_guest_lecture\\code\\snn_mlp.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2026.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "11/17/26 10:33:03",
+ "timestampMillis": "1794907983552",
+ "buildStep": {
+  "cmdId": "ab69f4ac-ece4-4c49-9a9b-175747c90992",
+  "name": "",
+  "logFile": "C:/Users\\Chris\\Documents\\Vivado\\Assignment_2\\snn_mlp\\snn_mlp\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\Chris\\Documents\\Vivado\\Assignment_2\\snn_mlp"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/17/26 10:33:03",
+ "timestampMillis": "1794907983553",
+ "status": {
+  "cmdId": "ab69f4ac-ece4-4c49-9a9b-175747c90992",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/17/26 10:33:26",
+ "timestampMillis": "1794908006286",
+ "status": {
+  "cmdId": "ab69f4ac-ece4-4c49-9a9b-175747c90992",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/17/26 10:33:26",
+ "timestampMillis": "1794908006433",
+ "status": {
+  "cmdId": "234fbbef-1b41-4846-9ec4-c40e015c6d67",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/17/26 10:33:26",
+ "timestampMillis": "1794908006433",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/17/26 10:33:26",
+ "timestampMillis": "1794908006434",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

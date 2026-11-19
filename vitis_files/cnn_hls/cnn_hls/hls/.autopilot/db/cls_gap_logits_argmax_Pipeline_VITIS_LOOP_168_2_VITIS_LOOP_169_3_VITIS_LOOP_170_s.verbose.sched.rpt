@@ -1,0 +1,277 @@
+
+
+================================================================
+== Vitis HLS Report for 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_168_2_VITIS_LOOP_169_3_VITIS_LOOP_170_s'
+================================================================
+* Date:           Tue Nov 17 10:18:37 2026
+
+* Version:        2026.1 (Build 6493734 on Jun 16 2026)
+* Project:        cnn_hls
+* Solution:       hls
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  8.00 ns|  7.060 ns|     2.16 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |      206|      206|  1.648 us|  1.648 us|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                                      |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |                       Loop Name                      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_168_2_VITIS_LOOP_169_3_VITIS_LOOP_170_4  |      204|      204|         6|          1|          1|   200|       yes|
+        +------------------------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 6
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 6, States = { 1 2 3 4 5 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.03>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%ic_1 = alloca i32 1" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:170]   --->   Operation 9 'alloca' 'ic_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%w = alloca i32 1" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169]   --->   Operation 10 'alloca' 'w' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 11 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%h = alloca i32 1" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168]   --->   Operation 12 'alloca' 'h' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%indvar_flatten12 = alloca i32 1"   --->   Operation 13 'alloca' 'indvar_flatten12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %bins_r, i64 666, i64 23, i64 18446744073709551615, i1 0"   --->   Operation 14 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 0, i8 %indvar_flatten12"   --->   Operation 15 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 16 [1/1] (1.58ns)   --->   "%store_ln168 = store i3 0, i3 %h" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168]   --->   Operation 16 'store' 'store_ln168' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 17 [1/1] (1.58ns)   --->   "%store_ln0 = store i7 0, i7 %indvar_flatten"   --->   Operation 17 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 18 [1/1] (1.58ns)   --->   "%store_ln169 = store i3 0, i3 %w" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169]   --->   Operation 18 'store' 'store_ln169' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 19 [1/1] (1.58ns)   --->   "%store_ln170 = store i4 0, i4 %ic_1" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:170]   --->   Operation 19 'store' 'store_ln170' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body13"   --->   Operation 20 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i7 %indvar_flatten" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169]   --->   Operation 21 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%indvar_flatten12_load = load i8 %indvar_flatten12" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168]   --->   Operation 22 'load' 'indvar_flatten12_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (1.91ns)   --->   "%icmp_ln168 = icmp_eq  i8 %indvar_flatten12_load, i8 200" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168]   --->   Operation 23 'icmp' 'icmp_ln168' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (1.91ns)   --->   "%add_ln168_1 = add i8 %indvar_flatten12_load, i8 1" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168]   --->   Operation 24 'add' 'add_ln168_1' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%br_ln168 = br i1 %icmp_ln168, void %for.inc28, void %for.body37.preheader.exitStub" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168]   --->   Operation 25 'br' 'br_ln168' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (1.87ns)   --->   "%icmp_ln169 = icmp_eq  i7 %indvar_flatten_load, i7 40" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169]   --->   Operation 26 'icmp' 'icmp_ln169' <Predicate = (!icmp_ln168)> <Delay = 1.87> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (1.87ns)   --->   "%add_ln169_1 = add i7 %indvar_flatten_load, i7 1" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169]   --->   Operation 27 'add' 'add_ln169_1' <Predicate = (!icmp_ln168)> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (0.99ns)   --->   "%select_ln169 = select i1 %icmp_ln169, i7 1, i7 %add_ln169_1" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169]   --->   Operation 28 'select' 'select_ln169' <Predicate = (!icmp_ln168)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (1.58ns)   --->   "%store_ln168 = store i8 %add_ln168_1, i8 %indvar_flatten12" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168]   --->   Operation 29 'store' 'store_ln168' <Predicate = (!icmp_ln168)> <Delay = 1.58>
+ST_1 : Operation 30 [1/1] (1.58ns)   --->   "%store_ln169 = store i7 %select_ln169, i7 %indvar_flatten" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169]   --->   Operation 30 'store' 'store_ln169' <Predicate = (!icmp_ln168)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 7.06>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%ic_1_load = load i4 %ic_1" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:170]   --->   Operation 31 'load' 'ic_1_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node and_ln168)   --->   "%xor_ln168 = xor i1 %icmp_ln169, i1 1" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168]   --->   Operation 32 'xor' 'xor_ln168' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (1.73ns)   --->   "%icmp_ln170 = icmp_eq  i4 %ic_1_load, i4 8" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:170]   --->   Operation 33 'icmp' 'icmp_ln170' <Predicate = true> <Delay = 1.73> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln168 = and i1 %icmp_ln170, i1 %xor_ln168" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168]   --->   Operation 34 'and' 'and_ln168' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.00ns) (grouped into LUT with out node ic_1_mid2)   --->   "%empty_65 = or i1 %and_ln168, i1 %icmp_ln169" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168]   --->   Operation 35 'or' 'empty_65' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 36 [1/1] (1.02ns) (out node of the LUT)   --->   "%ic_1_mid2 = select i1 %empty_65, i4 0, i4 %ic_1_load" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168]   --->   Operation 36 'select' 'ic_1_mid2' <Predicate = true> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%trunc_ln170 = trunc i4 %ic_1_mid2" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:170]   --->   Operation 37 'trunc' 'trunc_ln170' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (1.73ns)   --->   "%add_ln170 = add i4 %ic_1_mid2, i4 1" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:170]   --->   Operation 38 'add' 'add_ln170' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 39 [1/1] (1.58ns)   --->   "%store_ln170 = store i4 %add_ln170, i4 %ic_1" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:170]   --->   Operation 39 'store' 'store_ln170' <Predicate = true> <Delay = 1.58>
+
+State 3 <SV = 2> <Delay = 5.05>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%w_load = load i3 %w" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168]   --->   Operation 40 'load' 'w_load' <Predicate = (!icmp_ln169)> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%h_load = load i3 %h" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168]   --->   Operation 41 'load' 'h_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node add_ln169)   --->   "%select_ln168 = select i1 %icmp_ln169, i3 0, i3 %w_load" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168]   --->   Operation 42 'select' 'select_ln168' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node add_ln168)   --->   "%empty = select i1 %icmp_ln169, i3 1, i3 0" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169]   --->   Operation 43 'select' 'empty' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 44 [1/1] (1.65ns) (out node of the LUT)   --->   "%add_ln168 = add i3 %h_load, i3 %empty" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168]   --->   Operation 44 'add' 'add_ln168' <Predicate = true> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node add_ln169)   --->   "%empty_66 = select i1 %and_ln168, i3 1, i3 0" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168]   --->   Operation 45 'select' 'empty_66' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 46 [1/1] (1.65ns) (out node of the LUT)   --->   "%add_ln169 = add i3 %select_ln168, i3 %empty_66" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169]   --->   Operation 46 'add' 'add_ln169' <Predicate = true> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%zext_ln169 = zext i3 %add_ln168" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169]   --->   Operation 47 'zext' 'zext_ln169' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %add_ln168, i2 0" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 48 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln169_2 = add i5 %tmp, i5 %zext_ln169" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169]   --->   Operation 49 'add' 'add_ln169_2' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.70> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%zext_ln173 = zext i3 %add_ln169" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 50 'zext' 'zext_ln173' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (3.40ns) (root node of TernaryAdder)   --->   "%add_ln173_1 = add i5 %add_ln169_2, i5 %zext_ln173" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 51 'add' 'add_ln173_1' <Predicate = true> <Delay = 3.40> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.70> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 52 [1/1] (1.58ns)   --->   "%store_ln168 = store i3 %add_ln168, i3 %h" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168]   --->   Operation 52 'store' 'store_ln168' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 53 [1/1] (1.58ns)   --->   "%store_ln169 = store i3 %add_ln169, i3 %w" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169]   --->   Operation 53 'store' 'store_ln169' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%br_ln170 = br void %for.body13" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:170]   --->   Operation 54 'br' 'br_ln170' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 4.23>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%tmp_69 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i5.i3, i5 %add_ln173_1, i3 0" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 55 'bitconcatenate' 'tmp_69' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "%zext_ln173_1 = zext i4 %ic_1_mid2" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 56 'zext' 'zext_ln173_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 57 [1/1] (1.91ns)   --->   "%add_ln173_2 = add i8 %tmp_69, i8 %zext_ln173_1" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 57 'add' 'add_ln173_2' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "%zext_ln173_2 = zext i8 %add_ln173_2" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 58 'zext' 'zext_ln173_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%bins_addr = getelementptr i16 %bins_r, i64 0, i64 %zext_ln173_2" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 59 'getelementptr' 'bins_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 60 [1/1] (0.00ns)   --->   "%gap_read = read i24 @_ssdm_op_Read.ap_auto.i24P0A, i24 %gap" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 60 'read' 'gap_read' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "%gap_1_read = read i24 @_ssdm_op_Read.ap_auto.i24P0A, i24 %gap_1" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 61 'read' 'gap_1_read' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%gap_2_read = read i24 @_ssdm_op_Read.ap_auto.i24P0A, i24 %gap_2" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 62 'read' 'gap_2_read' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%gap_3_read = read i24 @_ssdm_op_Read.ap_auto.i24P0A, i24 %gap_3" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 63 'read' 'gap_3_read' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%gap_4_read = read i24 @_ssdm_op_Read.ap_auto.i24P0A, i24 %gap_4" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 64 'read' 'gap_4_read' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "%gap_5_read = read i24 @_ssdm_op_Read.ap_auto.i24P0A, i24 %gap_5" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 65 'read' 'gap_5_read' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%gap_6_read = read i24 @_ssdm_op_Read.ap_auto.i24P0A, i24 %gap_6" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 66 'read' 'gap_6_read' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 67 [1/1] (0.00ns)   --->   "%gap_7_read = read i24 @_ssdm_op_Read.ap_auto.i24P0A, i24 %gap_7" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 67 'read' 'gap_7_read' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 68 [1/1] (2.30ns)   --->   "%tmp_26 = sparsemux i24 @_ssdm_op_SparseMux.ap_auto.8i24.i24.i3, i3 0, i24 %gap_read, i3 1, i24 %gap_1_read, i3 2, i24 %gap_2_read, i3 3, i24 %gap_3_read, i3 4, i24 %gap_4_read, i3 5, i24 %gap_5_read, i3 6, i24 %gap_6_read, i3 7, i24 %gap_7_read, i24 0, i3 %trunc_ln170" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 68 'sparsemux' 'tmp_26' <Predicate = true> <Delay = 2.30> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 137 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 69 [2/2] (2.32ns)   --->   "%bins_load = load i8 %bins_addr" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 69 'load' 'bins_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_2P_LUTRAM">   --->   Core 89 'RAM_2P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 200> <RAM>
+
+State 5 <SV = 4> <Delay = 6.98>
+ST_5 : Operation 70 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_168_2_VITIS_LOOP_169_3_VITIS_LOOP_170_4_str"   --->   Operation 70 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 71 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 200, i64 200, i64 200"   --->   Operation 71 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 72 [1/1] (0.00ns)   --->   "%specpipeline_ln172 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, i32 4294967295, void @empty_10" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:172]   --->   Operation 72 'specpipeline' 'specpipeline_ln172' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 73 [1/2] ( I:2.32ns O:2.32ns )   --->   "%bins_load = load i8 %bins_addr" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 73 'load' 'bins_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_2P_LUTRAM">   --->   Core 89 'RAM_2P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 200> <RAM>
+ST_5 : Operation 74 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i20 @_ssdm_op_BitConcatenate.i20.i16.i4, i16 %bins_load, i4 0" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 74 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 75 [1/1] (0.00ns)   --->   "%sext_ln173 = sext i24 %tmp_26" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 75 'sext' 'sext_ln173' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 76 [1/1] (0.00ns)   --->   "%sext_ln173_1 = sext i20 %shl_ln" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 76 'sext' 'sext_ln173_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 77 [1/1] (2.31ns)   --->   "%add_ln173 = add i25 %sext_ln173_1, i25 %sext_ln173" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 77 'add' 'add_ln173' <Predicate = true> <Delay = 2.31> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.31> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 78 [1/1] (2.34ns)   --->   "%icmp_ln173 = icmp_eq  i25 %add_ln173, i25 0" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 78 'icmp' 'icmp_ln173' <Predicate = true> <Delay = 2.34> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 79 [1/1] (0.00ns)   --->   "%br_ln173 = br i1 %icmp_ln173, void %if.end.i.i165, void %if.then.i.i163" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 79 'br' 'br_ln173' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 80 [1/1] (1.65ns)   --->   "%switch_ln173 = switch i3 %trunc_ln170, void %V32.i.i.i.i150233.case.726, i3 0, void %V32.i.i.i.i150233.case.019, i3 1, void %V32.i.i.i.i150233.case.120, i3 2, void %V32.i.i.i.i150233.case.221, i3 3, void %V32.i.i.i.i150233.case.322, i3 4, void %V32.i.i.i.i150233.case.423, i3 5, void %V32.i.i.i.i150233.case.524, i3 6, void %V32.i.i.i.i150233.case.625" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 80 'switch' 'switch_ln173' <Predicate = (icmp_ln173)> <Delay = 1.65>
+ST_5 : Operation 81 [1/1] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_auto.i24P0A, i24 %gap_6, i24 0" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 81 'write' 'write_ln173' <Predicate = (icmp_ln173 & trunc_ln170 == 6)> <Delay = 0.00>
+ST_5 : Operation 82 [1/1] (0.00ns)   --->   "%br_ln173 = br void %V32.i.i.i.i150233.exit18" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 82 'br' 'br_ln173' <Predicate = (icmp_ln173 & trunc_ln170 == 6)> <Delay = 0.00>
+ST_5 : Operation 83 [1/1] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_auto.i24P0A, i24 %gap_5, i24 0" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 83 'write' 'write_ln173' <Predicate = (icmp_ln173 & trunc_ln170 == 5)> <Delay = 0.00>
+ST_5 : Operation 84 [1/1] (0.00ns)   --->   "%br_ln173 = br void %V32.i.i.i.i150233.exit18" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 84 'br' 'br_ln173' <Predicate = (icmp_ln173 & trunc_ln170 == 5)> <Delay = 0.00>
+ST_5 : Operation 85 [1/1] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_auto.i24P0A, i24 %gap_4, i24 0" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 85 'write' 'write_ln173' <Predicate = (icmp_ln173 & trunc_ln170 == 4)> <Delay = 0.00>
+ST_5 : Operation 86 [1/1] (0.00ns)   --->   "%br_ln173 = br void %V32.i.i.i.i150233.exit18" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 86 'br' 'br_ln173' <Predicate = (icmp_ln173 & trunc_ln170 == 4)> <Delay = 0.00>
+ST_5 : Operation 87 [1/1] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_auto.i24P0A, i24 %gap_3, i24 0" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 87 'write' 'write_ln173' <Predicate = (icmp_ln173 & trunc_ln170 == 3)> <Delay = 0.00>
+ST_5 : Operation 88 [1/1] (0.00ns)   --->   "%br_ln173 = br void %V32.i.i.i.i150233.exit18" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 88 'br' 'br_ln173' <Predicate = (icmp_ln173 & trunc_ln170 == 3)> <Delay = 0.00>
+ST_5 : Operation 89 [1/1] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_auto.i24P0A, i24 %gap_2, i24 0" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 89 'write' 'write_ln173' <Predicate = (icmp_ln173 & trunc_ln170 == 2)> <Delay = 0.00>
+ST_5 : Operation 90 [1/1] (0.00ns)   --->   "%br_ln173 = br void %V32.i.i.i.i150233.exit18" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 90 'br' 'br_ln173' <Predicate = (icmp_ln173 & trunc_ln170 == 2)> <Delay = 0.00>
+ST_5 : Operation 91 [1/1] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_auto.i24P0A, i24 %gap_1, i24 0" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 91 'write' 'write_ln173' <Predicate = (icmp_ln173 & trunc_ln170 == 1)> <Delay = 0.00>
+ST_5 : Operation 92 [1/1] (0.00ns)   --->   "%br_ln173 = br void %V32.i.i.i.i150233.exit18" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 92 'br' 'br_ln173' <Predicate = (icmp_ln173 & trunc_ln170 == 1)> <Delay = 0.00>
+ST_5 : Operation 93 [1/1] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_auto.i24P0A, i24 %gap, i24 0" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 93 'write' 'write_ln173' <Predicate = (icmp_ln173 & trunc_ln170 == 0)> <Delay = 0.00>
+ST_5 : Operation 94 [1/1] (0.00ns)   --->   "%br_ln173 = br void %V32.i.i.i.i150233.exit18" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 94 'br' 'br_ln173' <Predicate = (icmp_ln173 & trunc_ln170 == 0)> <Delay = 0.00>
+ST_5 : Operation 95 [1/1] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_auto.i24P0A, i24 %gap_7, i24 0" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 95 'write' 'write_ln173' <Predicate = (icmp_ln173 & trunc_ln170 == 7)> <Delay = 0.00>
+ST_5 : Operation 96 [1/1] (0.00ns)   --->   "%br_ln173 = br void %V32.i.i.i.i150233.exit18" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 96 'br' 'br_ln173' <Predicate = (icmp_ln173 & trunc_ln170 == 7)> <Delay = 0.00>
+ST_5 : Operation 97 [1/1] (0.00ns)   --->   "%gap_9 = trunc i25 %add_ln173" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 97 'trunc' 'gap_9' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 98 [1/1] (1.65ns)   --->   "%switch_ln173 = switch i3 %trunc_ln170, void %V32.i.i.i.i150233.case.7, i3 0, void %V32.i.i.i.i150233.case.0, i3 1, void %V32.i.i.i.i150233.case.1, i3 2, void %V32.i.i.i.i150233.case.2, i3 3, void %V32.i.i.i.i150233.case.3, i3 4, void %V32.i.i.i.i150233.case.4, i3 5, void %V32.i.i.i.i150233.case.5, i3 6, void %V32.i.i.i.i150233.case.6" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 98 'switch' 'switch_ln173' <Predicate = true> <Delay = 1.65>
+ST_5 : Operation 116 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 116 'ret' 'ret_ln0' <Predicate = (icmp_ln168)> <Delay = 1.58>
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 99 [1/1] (0.00ns)   --->   "%br_ln173 = br void %if.end.i.i165" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 99 'br' 'br_ln173' <Predicate = (icmp_ln173)> <Delay = 0.00>
+ST_6 : Operation 100 [1/1] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_auto.i24P0A, i24 %gap_6, i24 %gap_9" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 100 'write' 'write_ln173' <Predicate = (trunc_ln170 == 6)> <Delay = 0.00>
+ST_6 : Operation 101 [1/1] (0.00ns)   --->   "%br_ln173 = br void %V32.i.i.i.i150233.exit" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 101 'br' 'br_ln173' <Predicate = (trunc_ln170 == 6)> <Delay = 0.00>
+ST_6 : Operation 102 [1/1] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_auto.i24P0A, i24 %gap_5, i24 %gap_9" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 102 'write' 'write_ln173' <Predicate = (trunc_ln170 == 5)> <Delay = 0.00>
+ST_6 : Operation 103 [1/1] (0.00ns)   --->   "%br_ln173 = br void %V32.i.i.i.i150233.exit" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 103 'br' 'br_ln173' <Predicate = (trunc_ln170 == 5)> <Delay = 0.00>
+ST_6 : Operation 104 [1/1] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_auto.i24P0A, i24 %gap_4, i24 %gap_9" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 104 'write' 'write_ln173' <Predicate = (trunc_ln170 == 4)> <Delay = 0.00>
+ST_6 : Operation 105 [1/1] (0.00ns)   --->   "%br_ln173 = br void %V32.i.i.i.i150233.exit" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 105 'br' 'br_ln173' <Predicate = (trunc_ln170 == 4)> <Delay = 0.00>
+ST_6 : Operation 106 [1/1] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_auto.i24P0A, i24 %gap_3, i24 %gap_9" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 106 'write' 'write_ln173' <Predicate = (trunc_ln170 == 3)> <Delay = 0.00>
+ST_6 : Operation 107 [1/1] (0.00ns)   --->   "%br_ln173 = br void %V32.i.i.i.i150233.exit" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 107 'br' 'br_ln173' <Predicate = (trunc_ln170 == 3)> <Delay = 0.00>
+ST_6 : Operation 108 [1/1] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_auto.i24P0A, i24 %gap_2, i24 %gap_9" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 108 'write' 'write_ln173' <Predicate = (trunc_ln170 == 2)> <Delay = 0.00>
+ST_6 : Operation 109 [1/1] (0.00ns)   --->   "%br_ln173 = br void %V32.i.i.i.i150233.exit" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 109 'br' 'br_ln173' <Predicate = (trunc_ln170 == 2)> <Delay = 0.00>
+ST_6 : Operation 110 [1/1] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_auto.i24P0A, i24 %gap_1, i24 %gap_9" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 110 'write' 'write_ln173' <Predicate = (trunc_ln170 == 1)> <Delay = 0.00>
+ST_6 : Operation 111 [1/1] (0.00ns)   --->   "%br_ln173 = br void %V32.i.i.i.i150233.exit" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 111 'br' 'br_ln173' <Predicate = (trunc_ln170 == 1)> <Delay = 0.00>
+ST_6 : Operation 112 [1/1] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_auto.i24P0A, i24 %gap, i24 %gap_9" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 112 'write' 'write_ln173' <Predicate = (trunc_ln170 == 0)> <Delay = 0.00>
+ST_6 : Operation 113 [1/1] (0.00ns)   --->   "%br_ln173 = br void %V32.i.i.i.i150233.exit" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 113 'br' 'br_ln173' <Predicate = (trunc_ln170 == 0)> <Delay = 0.00>
+ST_6 : Operation 114 [1/1] (0.00ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_auto.i24P0A, i24 %gap_7, i24 %gap_9" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 114 'write' 'write_ln173' <Predicate = (trunc_ln170 == 7)> <Delay = 0.00>
+ST_6 : Operation 115 [1/1] (0.00ns)   --->   "%br_ln173 = br void %V32.i.i.i.i150233.exit" [C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173]   --->   Operation 115 'br' 'br_ln173' <Predicate = (trunc_ln170 == 7)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8.000ns, clock uncertainty: 2.160ns.
+
+ <State 1>: 6.039ns
+The critical path consists of the following:
+	'store' operation ('store_ln0') of constant 0 7 bit on local variable 'indvar_flatten' [18]  (1.588 ns)
+	'load' operation 7 bit ('indvar_flatten_load', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169) on local variable 'indvar_flatten' [23]  (0.000 ns)
+	'add' operation 7 bit ('add_ln169_1', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169) [130]  (1.870 ns)
+	'select' operation 7 bit ('select_ln169', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169) [131]  (0.993 ns)
+	'store' operation ('store_ln169', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169) of variable 'select_ln169', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169 7 bit on local variable 'indvar_flatten' [134]  (1.588 ns)
+
+ <State 2>: 7.060ns
+The critical path consists of the following:
+	'load' operation 4 bit ('ic_1_load', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:170) on local variable 'ic', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:170 [29]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln170', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:170) [37]  (1.735 ns)
+	'and' operation 1 bit ('and_ln168', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168) [38]  (0.978 ns)
+	'or' operation 1 bit ('empty_65', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168) [41]  (0.000 ns)
+	'select' operation 4 bit ('ic_1_mid2', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168) [42]  (1.024 ns)
+	'add' operation 4 bit ('add_ln170', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:170) [129]  (1.735 ns)
+	'store' operation ('store_ln170', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:170) of variable 'add_ln170', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:170 4 bit on local variable 'ic', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:170 [136]  (1.588 ns)
+
+ <State 3>: 5.054ns
+The critical path consists of the following:
+	'load' operation 3 bit ('w_load', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168) on local variable 'w', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169 [30]  (0.000 ns)
+	'select' operation 3 bit ('select_ln168', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:168) [35]  (0.000 ns)
+	'add' operation 3 bit ('add_ln169', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:169) [44]  (1.650 ns)
+	'add' operation 5 bit ('add_ln173_1', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173) [49]  (3.404 ns)
+
+ <State 4>: 4.237ns
+The critical path consists of the following:
+	'add' operation 8 bit ('add_ln173_2', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173) [52]  (1.915 ns)
+	'getelementptr' operation 8 bit ('bins_addr', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173) [54]  (0.000 ns)
+	'load' operation 16 bit ('bins_load', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173) on array 'bins_r' [66]  (2.322 ns)
+
+ <State 5>: 6.981ns
+The critical path consists of the following:
+	'load' operation 16 bit ('bins_load', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173) on array 'bins_r' [66]  (2.322 ns)
+	'add' operation 25 bit ('add_ln173', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173) [70]  (2.314 ns)
+	'icmp' operation 1 bit ('icmp_ln173', C:/Users/Chris/Documents/Vivado/pythonenv/CNN_guest_lecture/code/ds_cnn.cpp:173) [71]  (2.344 ns)
+
+ <State 6>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

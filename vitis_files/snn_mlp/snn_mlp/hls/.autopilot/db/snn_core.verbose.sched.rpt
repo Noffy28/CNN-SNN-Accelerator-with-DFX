@@ -1,0 +1,327 @@
+
+
+================================================================
+== Vitis HLS Report for 'snn_core'
+================================================================
+* Date:           Tue Nov 17 10:24:25 2026
+
+* Version:        2026.1 (Build 6493734 on Jun 16 2026)
+* Project:        snn_mlp
+* Solution:       hls
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  8.00 ns|  5.959 ns|     2.16 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    76415|    76415|  0.611 ms|  0.611 ms|  76415|  76415|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_244_4  |    76345|    76345|     15269|          -|          -|     5|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 11 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 4 
+11 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%logits_out_0_0 = alloca i32 1"   --->   Operation 12 'alloca' 'logits_out_0_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%logits_out_1_0 = alloca i32 1"   --->   Operation 13 'alloca' 'logits_out_1_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%logits_out_2_0 = alloca i32 1"   --->   Operation 14 'alloca' 'logits_out_2_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%logits_out_3_0 = alloca i32 1"   --->   Operation 15 'alloca' 'logits_out_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%t = alloca i32 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:244]   --->   Operation 16 'alloca' 't' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%mem3_3_0 = alloca i32 1"   --->   Operation 17 'alloca' 'mem3_3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%mem3_2_0 = alloca i32 1"   --->   Operation 18 'alloca' 'mem3_2_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%mem3_1_0 = alloca i32 1"   --->   Operation 19 'alloca' 'mem3_1_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%mem3_0 = alloca i32 1"   --->   Operation 20 'alloca' 'mem3_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%mem1 = alloca i64 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:205]   --->   Operation 21 'alloca' 'mem1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%mem1_1 = alloca i64 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:205]   --->   Operation 22 'alloca' 'mem1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%mem1_2 = alloca i64 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:205]   --->   Operation 23 'alloca' 'mem1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%mem1_3 = alloca i64 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:205]   --->   Operation 24 'alloca' 'mem1_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%mem2 = alloca i64 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:206]   --->   Operation 25 'alloca' 'mem2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%mem2_1 = alloca i64 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:206]   --->   Operation 26 'alloca' 'mem2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%mem2_2 = alloca i64 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:206]   --->   Operation 27 'alloca' 'mem2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%mem2_3 = alloca i64 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:206]   --->   Operation 28 'alloca' 'mem2_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%spk1 = alloca i64 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:209]   --->   Operation 29 'alloca' 'spk1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%spk1_1 = alloca i64 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:209]   --->   Operation 30 'alloca' 'spk1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%spk1_2 = alloca i64 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:209]   --->   Operation 31 'alloca' 'spk1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%spk1_3 = alloca i64 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:209]   --->   Operation 32 'alloca' 'spk1_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%spk2 = alloca i64 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:210]   --->   Operation 33 'alloca' 'spk2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%spk2_1 = alloca i64 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:210]   --->   Operation 34 'alloca' 'spk2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%spk2_2 = alloca i64 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:210]   --->   Operation 35 'alloca' 'spk2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%spk2_3 = alloca i64 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:210]   --->   Operation 36 'alloca' 'spk2_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [2/2] (0.00ns)   --->   "%call_ln0 = call void @snn_core_Pipeline_VITIS_LOOP_225_1, i1 %spk1_3, i1 %spk1_2, i1 %spk1_1, i1 %spk1, i32 %mem1_3, i32 %mem1_2, i32 %mem1_1, i32 %mem1"   --->   Operation 37 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_1 : Operation 38 [2/2] (0.00ns)   --->   "%call_ln0 = call void @snn_core_Pipeline_VITIS_LOOP_231_2, i1 %spk2_3, i1 %spk2_2, i1 %spk2_1, i1 %spk2, i32 %mem2_3, i32 %mem2_2, i32 %mem2_1, i32 %mem2"   --->   Operation 38 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 5.04>
+ST_2 : Operation 39 [1/2] (5.04ns)   --->   "%call_ln0 = call void @snn_core_Pipeline_VITIS_LOOP_225_1, i1 %spk1_3, i1 %spk1_2, i1 %spk1_1, i1 %spk1, i32 %mem1_3, i32 %mem1_2, i32 %mem1_1, i32 %mem1"   --->   Operation 39 'call' 'call_ln0' <Predicate = true> <Delay = 5.04> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 40 [1/2] (5.00ns)   --->   "%call_ln0 = call void @snn_core_Pipeline_VITIS_LOOP_231_2, i1 %spk2_3, i1 %spk2_2, i1 %spk2_1, i1 %spk2, i32 %mem2_3, i32 %mem2_2, i32 %mem2_1, i32 %mem2"   --->   Operation 40 'call' 'call_ln0' <Predicate = true> <Delay = 5.00> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 1.58>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %features_0_0, i64 666, i64 22, i64 18446744073709551615, i1 0"   --->   Operation 41 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %features_0_1, i64 666, i64 22, i64 18446744073709551615, i1 0"   --->   Operation 42 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %features_1_0, i64 666, i64 22, i64 18446744073709551615, i1 0"   --->   Operation 43 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %features_1_1, i64 666, i64 22, i64 18446744073709551615, i1 0"   --->   Operation 44 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %features_2_0, i64 666, i64 22, i64 18446744073709551615, i1 0"   --->   Operation 45 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %features_2_1, i64 666, i64 22, i64 18446744073709551615, i1 0"   --->   Operation 46 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %features_3_0, i64 666, i64 22, i64 18446744073709551615, i1 0"   --->   Operation 47 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %features_3_1, i64 666, i64 22, i64 18446744073709551615, i1 0"   --->   Operation 48 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %features_4_0, i64 666, i64 22, i64 18446744073709551615, i1 0"   --->   Operation 49 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %features_4_1, i64 666, i64 22, i64 18446744073709551615, i1 0"   --->   Operation 50 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 0, i32 %mem3_0"   --->   Operation 51 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 52 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 0, i32 %mem3_1_0"   --->   Operation 52 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 53 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 0, i32 %mem3_2_0"   --->   Operation 53 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 54 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 0, i32 %mem3_3_0"   --->   Operation 54 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 55 [1/1] (1.58ns)   --->   "%store_ln244 = store i3 0, i3 %t" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:244]   --->   Operation 55 'store' 'store_ln244' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 56 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 0, i32 %logits_out_3_0"   --->   Operation 56 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 57 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 0, i32 %logits_out_2_0"   --->   Operation 57 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 58 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 0, i32 %logits_out_1_0"   --->   Operation 58 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 59 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 0, i32 %logits_out_0_0"   --->   Operation 59 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%br_ln244 = br void %VITIS_LOOP_249_5" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:244]   --->   Operation 60 'br' 'br_ln244' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 5.80>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "%t_1 = load i3 %t" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:244]   --->   Operation 61 'load' 't_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (1.65ns)   --->   "%icmp_ln244 = icmp_eq  i3 %t_1, i3 5" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:244]   --->   Operation 62 'icmp' 'icmp_ln244' <Predicate = true> <Delay = 1.65> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 63 [1/1] (1.65ns)   --->   "%add_ln244 = add i3 %t_1, i3 1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:244]   --->   Operation 63 'add' 'add_ln244' <Predicate = true> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%br_ln244 = br i1 %icmp_ln244, void %VITIS_LOOP_249_5.split, void %for.inc72" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:244]   --->   Operation 64 'br' 'br_ln244' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "%speclooptripcount_ln244 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 5, i64 5, i64 5" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:244]   --->   Operation 65 'speclooptripcount' 'speclooptripcount_ln244' <Predicate = (!icmp_ln244)> <Delay = 0.00>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%specloopname_ln244 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:244]   --->   Operation 66 'specloopname' 'specloopname_ln244' <Predicate = (!icmp_ln244)> <Delay = 0.00>
+ST_4 : Operation 67 [1/1] (1.65ns)   --->   "%switch_ln245 = switch i3 %t_1, void %.case.4, i3 0, void %xlx_occurrence..case.0.3, i3 1, void %xlx_occurrence..case.1.2, i3 2, void %xlx_occurrence..case.2.1, i3 3, void %xlx_occurrence..case.3.0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 67 'switch' 'switch_ln245' <Predicate = (!icmp_ln244)> <Delay = 1.65>
+ST_4 : Operation 68 [2/2] (0.00ns)   --->   "%call_ln245 = call void @fc1_lif, i16 %features_3_0, i16 %features_3_1, i1 %spk1, i1 %spk1_1, i1 %spk1_2, i1 %spk1_3, i32 %mem1, i32 %mem1_1, i32 %mem1_2, i32 %mem1_3, i8 %p_ZL5fc1_b_0, i11 %p_ZL5fc1_w_0_0, i10 %p_ZL5fc1_w_0_1, i8 %p_ZL5fc1_b_1, i10 %p_ZL5fc1_w_1_0, i10 %p_ZL5fc1_w_1_1, i9 %p_ZL5fc1_b_2, i11 %p_ZL5fc1_w_2_0, i10 %p_ZL5fc1_w_2_1, i8 %p_ZL5fc1_b_3, i10 %p_ZL5fc1_w_3_0, i10 %p_ZL5fc1_w_3_1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 68 'call' 'call_ln245' <Predicate = (!icmp_ln244 & t_1 == 3)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 69 [2/2] (0.00ns)   --->   "%call_ln245 = call void @fc1_lif, i16 %features_2_0, i16 %features_2_1, i1 %spk1, i1 %spk1_1, i1 %spk1_2, i1 %spk1_3, i32 %mem1, i32 %mem1_1, i32 %mem1_2, i32 %mem1_3, i8 %p_ZL5fc1_b_0, i11 %p_ZL5fc1_w_0_0, i10 %p_ZL5fc1_w_0_1, i8 %p_ZL5fc1_b_1, i10 %p_ZL5fc1_w_1_0, i10 %p_ZL5fc1_w_1_1, i9 %p_ZL5fc1_b_2, i11 %p_ZL5fc1_w_2_0, i10 %p_ZL5fc1_w_2_1, i8 %p_ZL5fc1_b_3, i10 %p_ZL5fc1_w_3_0, i10 %p_ZL5fc1_w_3_1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 69 'call' 'call_ln245' <Predicate = (!icmp_ln244 & t_1 == 2)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 70 [2/2] (0.00ns)   --->   "%call_ln245 = call void @fc1_lif, i16 %features_1_0, i16 %features_1_1, i1 %spk1, i1 %spk1_1, i1 %spk1_2, i1 %spk1_3, i32 %mem1, i32 %mem1_1, i32 %mem1_2, i32 %mem1_3, i8 %p_ZL5fc1_b_0, i11 %p_ZL5fc1_w_0_0, i10 %p_ZL5fc1_w_0_1, i8 %p_ZL5fc1_b_1, i10 %p_ZL5fc1_w_1_0, i10 %p_ZL5fc1_w_1_1, i9 %p_ZL5fc1_b_2, i11 %p_ZL5fc1_w_2_0, i10 %p_ZL5fc1_w_2_1, i8 %p_ZL5fc1_b_3, i10 %p_ZL5fc1_w_3_0, i10 %p_ZL5fc1_w_3_1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 70 'call' 'call_ln245' <Predicate = (!icmp_ln244 & t_1 == 1)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 71 [2/2] (0.00ns)   --->   "%call_ln245 = call void @fc1_lif, i16 %features_0_0, i16 %features_0_1, i1 %spk1, i1 %spk1_1, i1 %spk1_2, i1 %spk1_3, i32 %mem1, i32 %mem1_1, i32 %mem1_2, i32 %mem1_3, i8 %p_ZL5fc1_b_0, i11 %p_ZL5fc1_w_0_0, i10 %p_ZL5fc1_w_0_1, i8 %p_ZL5fc1_b_1, i10 %p_ZL5fc1_w_1_0, i10 %p_ZL5fc1_w_1_1, i9 %p_ZL5fc1_b_2, i11 %p_ZL5fc1_w_2_0, i10 %p_ZL5fc1_w_2_1, i8 %p_ZL5fc1_b_3, i10 %p_ZL5fc1_w_3_0, i10 %p_ZL5fc1_w_3_1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 71 'call' 'call_ln245' <Predicate = (!icmp_ln244 & t_1 == 0)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 72 [2/2] (0.00ns)   --->   "%call_ln245 = call void @fc1_lif, i16 %features_4_0, i16 %features_4_1, i1 %spk1, i1 %spk1_1, i1 %spk1_2, i1 %spk1_3, i32 %mem1, i32 %mem1_1, i32 %mem1_2, i32 %mem1_3, i8 %p_ZL5fc1_b_0, i11 %p_ZL5fc1_w_0_0, i10 %p_ZL5fc1_w_0_1, i8 %p_ZL5fc1_b_1, i10 %p_ZL5fc1_w_1_0, i10 %p_ZL5fc1_w_1_1, i9 %p_ZL5fc1_b_2, i11 %p_ZL5fc1_w_2_0, i10 %p_ZL5fc1_w_2_1, i8 %p_ZL5fc1_b_3, i10 %p_ZL5fc1_w_3_0, i10 %p_ZL5fc1_w_3_1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 72 'call' 'call_ln245' <Predicate = (!icmp_ln244 & t_1 != 0 & t_1 != 1 & t_1 != 2 & t_1 != 3)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 73 [1/1] (0.00ns)   --->   "%logits_out_0_0_load_1 = load i32 %logits_out_0_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 73 'load' 'logits_out_0_0_load_1' <Predicate = (icmp_ln244)> <Delay = 0.00>
+ST_4 : Operation 74 [1/1] (0.00ns)   --->   "%logits_out_1_0_load_1 = load i32 %logits_out_1_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 74 'load' 'logits_out_1_0_load_1' <Predicate = (icmp_ln244)> <Delay = 0.00>
+ST_4 : Operation 75 [1/1] (0.00ns)   --->   "%logits_out_2_0_load_1 = load i32 %logits_out_2_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 75 'load' 'logits_out_2_0_load_1' <Predicate = (icmp_ln244)> <Delay = 0.00>
+ST_4 : Operation 76 [1/1] (2.55ns)   --->   "%best = icmp_sgt  i32 %logits_out_1_0_load_1, i32 %logits_out_0_0_load_1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 76 'icmp' 'best' <Predicate = (icmp_ln244)> <Delay = 2.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 77 [1/1] (0.69ns)   --->   "%best_val_2 = select i1 %best, i32 %logits_out_1_0_load_1, i32 %logits_out_0_0_load_1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 77 'select' 'best_val_2' <Predicate = (icmp_ln244)> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 78 [1/1] (2.55ns)   --->   "%icmp_ln186 = icmp_sgt  i32 %logits_out_2_0_load_1, i32 %best_val_2" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 78 'icmp' 'icmp_ln186' <Predicate = (icmp_ln244)> <Delay = 2.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 79 [1/1] (0.00ns)   --->   "%rbegin3 = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_13" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 79 'specregionbegin' 'rbegin3' <Predicate = (t_1 == 3)> <Delay = 0.00>
+ST_5 : Operation 80 [1/2] (0.00ns)   --->   "%call_ln245 = call void @fc1_lif, i16 %features_3_0, i16 %features_3_1, i1 %spk1, i1 %spk1_1, i1 %spk1_2, i1 %spk1_3, i32 %mem1, i32 %mem1_1, i32 %mem1_2, i32 %mem1_3, i8 %p_ZL5fc1_b_0, i11 %p_ZL5fc1_w_0_0, i10 %p_ZL5fc1_w_0_1, i8 %p_ZL5fc1_b_1, i10 %p_ZL5fc1_w_1_0, i10 %p_ZL5fc1_w_1_1, i9 %p_ZL5fc1_b_2, i11 %p_ZL5fc1_w_2_0, i10 %p_ZL5fc1_w_2_1, i8 %p_ZL5fc1_b_3, i10 %p_ZL5fc1_w_3_0, i10 %p_ZL5fc1_w_3_1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 80 'call' 'call_ln245' <Predicate = (t_1 == 3)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_5 : Operation 81 [1/1] (0.00ns)   --->   "%specoccurrence_ln245 = specoccurrence void @_ssdm_op_SpecOccurrence, i64 5, void @empty_20" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 81 'specoccurrence' 'specoccurrence_ln245' <Predicate = (t_1 == 3)> <Delay = 0.00>
+ST_5 : Operation 82 [1/1] (0.00ns)   --->   "%rend21 = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_13, i32 %rbegin3" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 82 'specregionend' 'rend21' <Predicate = (t_1 == 3)> <Delay = 0.00>
+ST_5 : Operation 83 [1/1] (0.00ns)   --->   "%br_ln245 = br void %.exit" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 83 'br' 'br_ln245' <Predicate = (t_1 == 3)> <Delay = 0.00>
+ST_5 : Operation 84 [1/1] (0.00ns)   --->   "%rbegin2 = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_14" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 84 'specregionbegin' 'rbegin2' <Predicate = (t_1 == 2)> <Delay = 0.00>
+ST_5 : Operation 85 [1/2] (0.00ns)   --->   "%call_ln245 = call void @fc1_lif, i16 %features_2_0, i16 %features_2_1, i1 %spk1, i1 %spk1_1, i1 %spk1_2, i1 %spk1_3, i32 %mem1, i32 %mem1_1, i32 %mem1_2, i32 %mem1_3, i8 %p_ZL5fc1_b_0, i11 %p_ZL5fc1_w_0_0, i10 %p_ZL5fc1_w_0_1, i8 %p_ZL5fc1_b_1, i10 %p_ZL5fc1_w_1_0, i10 %p_ZL5fc1_w_1_1, i9 %p_ZL5fc1_b_2, i11 %p_ZL5fc1_w_2_0, i10 %p_ZL5fc1_w_2_1, i8 %p_ZL5fc1_b_3, i10 %p_ZL5fc1_w_3_0, i10 %p_ZL5fc1_w_3_1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 85 'call' 'call_ln245' <Predicate = (t_1 == 2)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_5 : Operation 86 [1/1] (0.00ns)   --->   "%specoccurrence_ln245 = specoccurrence void @_ssdm_op_SpecOccurrence, i64 5, void @empty_20" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 86 'specoccurrence' 'specoccurrence_ln245' <Predicate = (t_1 == 2)> <Delay = 0.00>
+ST_5 : Operation 87 [1/1] (0.00ns)   --->   "%rend19 = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_14, i32 %rbegin2" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 87 'specregionend' 'rend19' <Predicate = (t_1 == 2)> <Delay = 0.00>
+ST_5 : Operation 88 [1/1] (0.00ns)   --->   "%br_ln245 = br void %.exit" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 88 'br' 'br_ln245' <Predicate = (t_1 == 2)> <Delay = 0.00>
+ST_5 : Operation 89 [1/1] (0.00ns)   --->   "%rbegin1 = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_22" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 89 'specregionbegin' 'rbegin1' <Predicate = (t_1 == 1)> <Delay = 0.00>
+ST_5 : Operation 90 [1/2] (0.00ns)   --->   "%call_ln245 = call void @fc1_lif, i16 %features_1_0, i16 %features_1_1, i1 %spk1, i1 %spk1_1, i1 %spk1_2, i1 %spk1_3, i32 %mem1, i32 %mem1_1, i32 %mem1_2, i32 %mem1_3, i8 %p_ZL5fc1_b_0, i11 %p_ZL5fc1_w_0_0, i10 %p_ZL5fc1_w_0_1, i8 %p_ZL5fc1_b_1, i10 %p_ZL5fc1_w_1_0, i10 %p_ZL5fc1_w_1_1, i9 %p_ZL5fc1_b_2, i11 %p_ZL5fc1_w_2_0, i10 %p_ZL5fc1_w_2_1, i8 %p_ZL5fc1_b_3, i10 %p_ZL5fc1_w_3_0, i10 %p_ZL5fc1_w_3_1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 90 'call' 'call_ln245' <Predicate = (t_1 == 1)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_5 : Operation 91 [1/1] (0.00ns)   --->   "%specoccurrence_ln245 = specoccurrence void @_ssdm_op_SpecOccurrence, i64 5, void @empty_20" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 91 'specoccurrence' 'specoccurrence_ln245' <Predicate = (t_1 == 1)> <Delay = 0.00>
+ST_5 : Operation 92 [1/1] (0.00ns)   --->   "%rend17 = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_22, i32 %rbegin1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 92 'specregionend' 'rend17' <Predicate = (t_1 == 1)> <Delay = 0.00>
+ST_5 : Operation 93 [1/1] (0.00ns)   --->   "%br_ln245 = br void %.exit" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 93 'br' 'br_ln245' <Predicate = (t_1 == 1)> <Delay = 0.00>
+ST_5 : Operation 94 [1/1] (0.00ns)   --->   "%rbegin = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_11" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 94 'specregionbegin' 'rbegin' <Predicate = (t_1 == 0)> <Delay = 0.00>
+ST_5 : Operation 95 [1/2] (0.00ns)   --->   "%call_ln245 = call void @fc1_lif, i16 %features_0_0, i16 %features_0_1, i1 %spk1, i1 %spk1_1, i1 %spk1_2, i1 %spk1_3, i32 %mem1, i32 %mem1_1, i32 %mem1_2, i32 %mem1_3, i8 %p_ZL5fc1_b_0, i11 %p_ZL5fc1_w_0_0, i10 %p_ZL5fc1_w_0_1, i8 %p_ZL5fc1_b_1, i10 %p_ZL5fc1_w_1_0, i10 %p_ZL5fc1_w_1_1, i9 %p_ZL5fc1_b_2, i11 %p_ZL5fc1_w_2_0, i10 %p_ZL5fc1_w_2_1, i8 %p_ZL5fc1_b_3, i10 %p_ZL5fc1_w_3_0, i10 %p_ZL5fc1_w_3_1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 95 'call' 'call_ln245' <Predicate = (t_1 == 0)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_5 : Operation 96 [1/1] (0.00ns)   --->   "%specoccurrence_ln245 = specoccurrence void @_ssdm_op_SpecOccurrence, i64 5, void @empty_20" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 96 'specoccurrence' 'specoccurrence_ln245' <Predicate = (t_1 == 0)> <Delay = 0.00>
+ST_5 : Operation 97 [1/1] (0.00ns)   --->   "%rend = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_11, i32 %rbegin" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 97 'specregionend' 'rend' <Predicate = (t_1 == 0)> <Delay = 0.00>
+ST_5 : Operation 98 [1/1] (0.00ns)   --->   "%br_ln245 = br void %.exit" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 98 'br' 'br_ln245' <Predicate = (t_1 == 0)> <Delay = 0.00>
+ST_5 : Operation 99 [1/2] (0.00ns)   --->   "%call_ln245 = call void @fc1_lif, i16 %features_4_0, i16 %features_4_1, i1 %spk1, i1 %spk1_1, i1 %spk1_2, i1 %spk1_3, i32 %mem1, i32 %mem1_1, i32 %mem1_2, i32 %mem1_3, i8 %p_ZL5fc1_b_0, i11 %p_ZL5fc1_w_0_0, i10 %p_ZL5fc1_w_0_1, i8 %p_ZL5fc1_b_1, i10 %p_ZL5fc1_w_1_0, i10 %p_ZL5fc1_w_1_1, i9 %p_ZL5fc1_b_2, i11 %p_ZL5fc1_w_2_0, i10 %p_ZL5fc1_w_2_1, i8 %p_ZL5fc1_b_3, i10 %p_ZL5fc1_w_3_0, i10 %p_ZL5fc1_w_3_1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 99 'call' 'call_ln245' <Predicate = (t_1 != 0 & t_1 != 1 & t_1 != 2 & t_1 != 3)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_5 : Operation 100 [1/1] (0.00ns)   --->   "%br_ln245 = br void %.exit" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:245]   --->   Operation 100 'br' 'br_ln245' <Predicate = (t_1 != 0 & t_1 != 1 & t_1 != 2 & t_1 != 3)> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 101 [2/2] (0.00ns)   --->   "%call_ln246 = call void @fc2_lif, i1 %spk1, i1 %spk1_1, i1 %spk1_2, i1 %spk1_3, i1 %spk2, i1 %spk2_1, i1 %spk2_2, i1 %spk2_3, i32 %mem2, i32 %mem2_1, i32 %mem2_2, i32 %mem2_3, i8 %p_ZL5fc2_b_0, i10 %p_ZL5fc2_w_0, i8 %p_ZL5fc2_b_1, i10 %p_ZL5fc2_w_1, i8 %p_ZL5fc2_b_2, i10 %p_ZL5fc2_w_2, i8 %p_ZL5fc2_b_3, i10 %p_ZL5fc2_w_3" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:246]   --->   Operation 101 'call' 'call_ln246' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 102 [1/2] (0.00ns)   --->   "%call_ln246 = call void @fc2_lif, i1 %spk1, i1 %spk1_1, i1 %spk1_2, i1 %spk1_3, i1 %spk2, i1 %spk2_1, i1 %spk2_2, i1 %spk2_3, i32 %mem2, i32 %mem2_1, i32 %mem2_2, i32 %mem2_3, i8 %p_ZL5fc2_b_0, i10 %p_ZL5fc2_w_0, i8 %p_ZL5fc2_b_1, i10 %p_ZL5fc2_w_1, i8 %p_ZL5fc2_b_2, i10 %p_ZL5fc2_w_2, i8 %p_ZL5fc2_b_3, i10 %p_ZL5fc2_w_3" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:246]   --->   Operation 102 'call' 'call_ln246' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 8 <SV = 7> <Delay = 2.83>
+ST_8 : Operation 103 [1/1] (0.00ns)   --->   "%mem3_3_0_load = load i32 %mem3_3_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:247]   --->   Operation 103 'load' 'mem3_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 104 [1/1] (0.00ns)   --->   "%mem3_2_0_load = load i32 %mem3_2_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:247]   --->   Operation 104 'load' 'mem3_2_0_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 105 [1/1] (0.00ns)   --->   "%mem3_1_0_load = load i32 %mem3_1_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:247]   --->   Operation 105 'load' 'mem3_1_0_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 106 [1/1] (0.00ns)   --->   "%mem3_0_load = load i32 %mem3_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:247]   --->   Operation 106 'load' 'mem3_0_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 107 [2/2] (2.83ns)   --->   "%call_ret = call i128 @fc3_lif, i1 %spk2, i1 %spk2_1, i1 %spk2_2, i1 %spk2_3, i32 %mem3_0_load, i32 %mem3_1_0_load, i32 %mem3_2_0_load, i32 %mem3_3_0_load, i9 %p_ZL5fc3_w_0, i9 %p_ZL5fc3_w_1, i8 %p_ZL5fc3_w_2, i8 %p_ZL5fc3_w_3" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:247]   --->   Operation 107 'call' 'call_ret' <Predicate = true> <Delay = 2.83> <CoreType = "Generic">   --->   Generic Core
+
+State 9 <SV = 8> <Delay = 5.80>
+ST_9 : Operation 108 [1/2] (5.80ns)   --->   "%call_ret = call i128 @fc3_lif, i1 %spk2, i1 %spk2_1, i1 %spk2_2, i1 %spk2_3, i32 %mem3_0_load, i32 %mem3_1_0_load, i32 %mem3_2_0_load, i32 %mem3_3_0_load, i9 %p_ZL5fc3_w_0, i9 %p_ZL5fc3_w_1, i8 %p_ZL5fc3_w_2, i8 %p_ZL5fc3_w_3" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:247]   --->   Operation 108 'call' 'call_ret' <Predicate = true> <Delay = 5.80> <CoreType = "Generic">   --->   Generic Core
+ST_9 : Operation 109 [1/1] (0.00ns)   --->   "%mem3_1 = extractvalue i128 %call_ret" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:247]   --->   Operation 109 'extractvalue' 'mem3_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 110 [1/1] (0.00ns)   --->   "%mem3_2 = extractvalue i128 %call_ret" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:247]   --->   Operation 110 'extractvalue' 'mem3_2' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 111 [1/1] (0.00ns)   --->   "%mem3_3 = extractvalue i128 %call_ret" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:247]   --->   Operation 111 'extractvalue' 'mem3_3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 112 [1/1] (0.00ns)   --->   "%mem3 = extractvalue i128 %call_ret" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:247]   --->   Operation 112 'extractvalue' 'mem3' <Predicate = true> <Delay = 0.00>
+
+State 10 <SV = 9> <Delay = 4.14>
+ST_10 : Operation 113 [1/1] (0.00ns)   --->   "%logits_out_0_0_load = load i32 %logits_out_0_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:251]   --->   Operation 113 'load' 'logits_out_0_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 114 [1/1] (0.00ns)   --->   "%logits_out_1_0_load = load i32 %logits_out_1_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:251]   --->   Operation 114 'load' 'logits_out_1_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 115 [1/1] (0.00ns)   --->   "%logits_out_2_0_load = load i32 %logits_out_2_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:251]   --->   Operation 115 'load' 'logits_out_2_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 116 [1/1] (0.00ns)   --->   "%logits_out_3_0_load = load i32 %logits_out_3_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:251]   --->   Operation 116 'load' 'logits_out_3_0_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 117 [1/1] (2.55ns)   --->   "%best_val = add i32 %mem3_1, i32 %logits_out_0_0_load" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:251]   --->   Operation 117 'add' 'best_val' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 118 [1/1] (2.55ns)   --->   "%best_val_5 = add i32 %mem3_2, i32 %logits_out_1_0_load" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:251]   --->   Operation 118 'add' 'best_val_5' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 119 [1/1] (2.55ns)   --->   "%best_val_6 = add i32 %mem3_3, i32 %logits_out_2_0_load" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:251]   --->   Operation 119 'add' 'best_val_6' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 120 [1/1] (2.55ns)   --->   "%add_ln251_3 = add i32 %mem3, i32 %logits_out_3_0_load" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:251]   --->   Operation 120 'add' 'add_ln251_3' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 121 [1/1] (1.58ns)   --->   "%store_ln247 = store i32 %mem3_1, i32 %mem3_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:247]   --->   Operation 121 'store' 'store_ln247' <Predicate = true> <Delay = 1.58>
+ST_10 : Operation 122 [1/1] (1.58ns)   --->   "%store_ln247 = store i32 %mem3_2, i32 %mem3_1_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:247]   --->   Operation 122 'store' 'store_ln247' <Predicate = true> <Delay = 1.58>
+ST_10 : Operation 123 [1/1] (1.58ns)   --->   "%store_ln247 = store i32 %mem3_3, i32 %mem3_2_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:247]   --->   Operation 123 'store' 'store_ln247' <Predicate = true> <Delay = 1.58>
+ST_10 : Operation 124 [1/1] (1.58ns)   --->   "%store_ln247 = store i32 %mem3, i32 %mem3_3_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:247]   --->   Operation 124 'store' 'store_ln247' <Predicate = true> <Delay = 1.58>
+ST_10 : Operation 125 [1/1] (1.58ns)   --->   "%store_ln244 = store i3 %add_ln244, i3 %t" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:244]   --->   Operation 125 'store' 'store_ln244' <Predicate = true> <Delay = 1.58>
+ST_10 : Operation 126 [1/1] (1.58ns)   --->   "%store_ln251 = store i32 %add_ln251_3, i32 %logits_out_3_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:251]   --->   Operation 126 'store' 'store_ln251' <Predicate = true> <Delay = 1.58>
+ST_10 : Operation 127 [1/1] (1.58ns)   --->   "%store_ln251 = store i32 %best_val_6, i32 %logits_out_2_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:251]   --->   Operation 127 'store' 'store_ln251' <Predicate = true> <Delay = 1.58>
+ST_10 : Operation 128 [1/1] (1.58ns)   --->   "%store_ln251 = store i32 %best_val_5, i32 %logits_out_1_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:251]   --->   Operation 128 'store' 'store_ln251' <Predicate = true> <Delay = 1.58>
+ST_10 : Operation 129 [1/1] (1.58ns)   --->   "%store_ln251 = store i32 %best_val, i32 %logits_out_0_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:251]   --->   Operation 129 'store' 'store_ln251' <Predicate = true> <Delay = 1.58>
+ST_10 : Operation 130 [1/1] (0.00ns)   --->   "%br_ln244 = br void %VITIS_LOOP_249_5" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:244]   --->   Operation 130 'br' 'br_ln244' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 4> <Delay = 3.54>
+ST_11 : Operation 131 [1/1] (0.00ns)   --->   "%logits_out_3_0_load_1 = load i32 %logits_out_3_0" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 131 'load' 'logits_out_3_0_load_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 132 [1/1] (0.00ns) (grouped into LUT with out node best_1)   --->   "%zext_ln181 = zext i1 %best" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:181->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 132 'zext' 'zext_ln181' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 133 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln186_1)   --->   "%best_val_4 = select i1 %icmp_ln186, i32 %logits_out_2_0_load_1, i32 %best_val_2" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 133 'select' 'best_val_4' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 134 [1/1] (2.55ns) (out node of the LUT)   --->   "%icmp_ln186_1 = icmp_sgt  i32 %logits_out_3_0_load_1, i32 %best_val_4" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 134 'icmp' 'icmp_ln186_1' <Predicate = true> <Delay = 2.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 135 [1/1] (0.00ns) (grouped into LUT with out node best_1)   --->   "%select_ln186 = select i1 %icmp_ln186_1, i2 3, i2 2" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 135 'select' 'select_ln186' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 136 [1/1] (0.00ns) (grouped into LUT with out node best_1)   --->   "%or_ln186 = or i1 %icmp_ln186_1, i1 %icmp_ln186" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 136 'or' 'or_ln186' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 137 [1/1] (0.99ns) (out node of the LUT)   --->   "%best_1 = select i1 %or_ln186, i2 %select_ln186, i2 %zext_ln181" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 137 'select' 'best_1' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 138 [1/1] (0.00ns)   --->   "%zext_ln180 = zext i2 %best_1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:180->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 138 'zext' 'zext_ln180' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 139 [1/1] (0.00ns)   --->   "%mrv = insertvalue i160 <undef>, i32 %zext_ln180" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 139 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 140 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i160 %mrv, i32 %logits_out_0_0_load_1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 140 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 141 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i160 %mrv_1, i32 %logits_out_1_0_load_1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 141 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 142 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue i160 %mrv_2, i32 %logits_out_2_0_load_1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 142 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 143 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue i160 %mrv_3, i32 %logits_out_3_0_load_1" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 143 'insertvalue' 'mrv_4' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 144 [1/1] (0.00ns)   --->   "%ret_ln260 = ret i160 %mrv_4" [C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260]   --->   Operation 144 'ret' 'ret_ln260' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8.000ns, clock uncertainty: 2.160ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 5.046ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'snn_core_Pipeline_VITIS_LOOP_225_1' [70]  (5.046 ns)
+
+ <State 3>: 1.588ns
+The critical path consists of the following:
+	'store' operation ('store_ln0') of constant 0 32 bit on local variable 'mem3_0' [72]  (1.588 ns)
+
+ <State 4>: 5.802ns
+The critical path consists of the following:
+	'load' operation 32 bit ('logits_out_0_0_load_1', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260) on local variable 'logits_out_0_0' [148]  (0.000 ns)
+	'icmp' operation 1 bit ('best', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260) [152]  (2.552 ns)
+	'select' operation 32 bit ('best_val', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260) [153]  (0.698 ns)
+	'icmp' operation 1 bit ('icmp_ln186', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260) [155]  (2.552 ns)
+
+ <State 5>: 0.000ns
+The critical path consists of the following:
+
+ <State 6>: 0.000ns
+The critical path consists of the following:
+
+ <State 7>: 0.000ns
+The critical path consists of the following:
+
+ <State 8>: 2.837ns
+The critical path consists of the following:
+	'load' operation 32 bit ('mem3_3_0_load', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:247) on local variable 'mem3_3_0' [123]  (0.000 ns)
+	'call' operation 128 bit ('call_ret', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:247) to 'fc3_lif' [128]  (2.837 ns)
+
+ <State 9>: 5.802ns
+The critical path consists of the following:
+	'call' operation 128 bit ('call_ret', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:247) to 'fc3_lif' [128]  (5.802 ns)
+
+ <State 10>: 4.140ns
+The critical path consists of the following:
+	'load' operation 32 bit ('logits_out_3_0_load', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:251) on local variable 'logits_out_3_0' [122]  (0.000 ns)
+	'add' operation 32 bit ('add_ln251_3', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:251) [136]  (2.552 ns)
+	'store' operation ('store_ln251', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:251) of variable 'add_ln251_3', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:251 32 bit on local variable 'logits_out_3_0' [142]  (1.588 ns)
+
+ <State 11>: 3.545ns
+The critical path consists of the following:
+	'load' operation 32 bit ('logits_out_3_0_load_1', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260) on local variable 'logits_out_3_0' [151]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln186_1', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260) [157]  (2.552 ns)
+	'select' operation 2 bit ('select_ln186', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260) [158]  (0.000 ns)
+	'select' operation 2 bit ('best', C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:186->C:/Users/Chris/Documents/Vivado/pythontorch/SNN_guest_lecture/code/snn_mlp.cpp:260) [160]  (0.993 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

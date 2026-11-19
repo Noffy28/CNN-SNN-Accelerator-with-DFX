@@ -1,0 +1,27 @@
+[
+  {
+    "directory": "C:\\Users\\Chris\\Documents\\Vivado\\Assignment_2\\snn_mlp",
+    "arguments": [
+      "C:\\AMDDesignTools\\2026.1\\Vitis\\win64\\tools\\clang-16\\bin\\clang++.exe",
+      "--sysroot=C:\\AMDDesignTools\\2026.1\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\AMDDesignTools\\2026.1\\Vitis\\common\\technology\\autopilot",
+      "-fhlstoplevel=snn_mlp",
+      "-c",
+      "C:\\Users\\Chris\\Documents\\Vivado\\pythontorch\\SNN_guest_lecture\\code\\snn_mlp.cpp"
+    ],
+    "file": "C:\\Users\\Chris\\Documents\\Vivado\\pythontorch\\SNN_guest_lecture\\code\\snn_mlp.cpp"
+  },
+  {
+    "directory": "C:\\Users\\Chris\\Documents\\Vivado\\Assignment_2\\snn_mlp",
+    "arguments": [
+      "C:\\AMDDesignTools\\2026.1\\Vitis\\win64\\tools\\clang-16\\bin\\clang++.exe",
+      "--sysroot=C:\\AMDDesignTools\\2026.1\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=C:\\AMDDesignTools\\2026.1\\Vitis\\include",
+      "-c",
+      "C:\\Users\\Chris\\Documents\\Vivado\\pythontorch\\SNN_guest_lecture\\code\\snn_mlp_tb.cpp"
+    ],
+    "file": "C:\\Users\\Chris\\Documents\\Vivado\\pythontorch\\SNN_guest_lecture\\code\\snn_mlp_tb.cpp"
+  }
+]
